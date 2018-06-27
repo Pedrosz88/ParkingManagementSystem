@@ -29,37 +29,47 @@ public class RegisterController {
     private URL location;
 
     @FXML
-    private TextField registerVarstaTField;
-
-    @FXML
     private Button registerViewButton;
 
     @FXML
     private Button registerRegisterButton;
 
     @FXML
-    private ChoiceBox<String> registerMateriaCBox;
-
-    @FXML
     private Button registerExitButton;
 
     @FXML
-    private TextField registerPrenumeTField;
+    private TextField registernumeClientTField;
 
     @FXML
-    private TextField registerNumeTField;
+    private TextField registernrInmatTField;
 
+    @FXML
+    private TextField registermarcaTField;
+
+    @FXML
+    private TextField registermodelulTField;
+
+    @FXML
+    private TextField registerculoareaTField;
+
+    @FXML
+    private TextField registerdataParcareTField;
+
+    @FXML
+    private TextField registernrTelefonTField;
 
     @FXML
     void initialize() {
-        registerMateriaCBox.setItems(FXCollections.observableArrayList("Matematica",
-                "Fizica", "Chimie", "Biologie", "Arta"));
         registerRegisterButton.setOnAction(event -> {
-            String nume = registerNumeTField.getText();
-            String prenume = registerPrenumeTField.getText();
-            int varsta = Integer.parseInt(registerVarstaTField.getText());
-            String materia = registerMateriaCBox.getValue();
-            addStudent(nume,prenume,varsta,materia);
+            String numeClient = registernumeClientTField.getText();
+            String nrInmat = registernrInmatTField.getText();
+            String marca = registermarcaTField.getText();
+            String modelul = registermodelulTField.getText();
+            String culoarea = registerculoareaTField.getText();
+            String dataParcare = registerdataParcareTField.getText();
+            String nrTelefon = registernrTelefonTField.getText();
+
+            addMasina(numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon);
         });
         registerViewButton.setOnAction(event -> {
             try {
@@ -79,18 +89,15 @@ public class RegisterController {
         window.setScene(viewScene);
         window.show();
     }
-    public void addStudent(String nume, String prenume, int varsta, String materia){
+    public void addMasina(String numeClient, String nrInmat, String marca, String modelul, String culoarea, String dataParcare, String nrTelefon){
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            String insertDb = "insert into masini"
-                    + "(nume,prenume,varsta,materia)"
-                    + "values ('"
-                    + nume + "', '" + prenume + "'," +
-                    varsta + ",'" + materia + "')";
+            String insertDb = "insert into proiect.masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
+                    "values ('" + numeClient + "', '" + nrInmat + "', '" + marca + "', '" + modelul + "', '" + culoarea + "', '" + dataParcare + "', '" + nrTelefon + "')";
             System.out.println(insertDb);
             myStmt.executeUpdate(insertDb);
         } catch (SQLException e) {
