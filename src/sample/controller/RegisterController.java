@@ -86,7 +86,7 @@ public class RegisterController {
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            String insertDb = "insert into student"
+            String insertDb = "insert into masini"
                     + "(nume,prenume,varsta,materia)"
                     + "values ('"
                     + nume + "', '" + prenume + "'," +

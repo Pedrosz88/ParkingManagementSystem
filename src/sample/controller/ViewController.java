@@ -19,7 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import sample.model.Student;
+import sample.model.Masina;
 
 public class ViewController {
 
@@ -30,22 +30,22 @@ public class ViewController {
     private URL location;
 
     @FXML
-    private TableView<Student> viewTView;
+    private TableView<Masina> viewTView;
 
     @FXML
-    private TableColumn<Student, String> viewPrenumeColumn;
+    private TableColumn<Masina, String> viewPrenumeColumn;
 
     @FXML
-    private TableColumn<Student, String> viewNumeColumn;
+    private TableColumn<Masina, String> viewNumeColumn;
 
     @FXML
-    private TableColumn<Student, String> viewMateriaColumn;
+    private TableColumn<Masina, String> viewMateriaColumn;
 
     @FXML
     private Button viewExitButton;
 
     @FXML
-    private TableColumn<Student, Integer> viewVarstaColumn;
+    private TableColumn<Masina, Integer> viewVarstaColumn;
 
     @FXML
     private Button viewBackButton;
@@ -53,10 +53,10 @@ public class ViewController {
 
     @FXML
     void initialize() {
-        viewNumeColumn.setCellValueFactory(new PropertyValueFactory<Student,String>("Nume"));
-        viewPrenumeColumn.setCellValueFactory(new PropertyValueFactory<Student,String>("Prenume"));
-        viewVarstaColumn.setCellValueFactory(new PropertyValueFactory<Student,Integer>("Varsta"));
-        viewMateriaColumn.setCellValueFactory(new PropertyValueFactory<Student,String>("Materia"));
+        viewNumeColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Nume"));
+        viewPrenumeColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Prenume"));
+        viewVarstaColumn.setCellValueFactory(new PropertyValueFactory<Masina,Integer>("Varsta"));
+        viewMateriaColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Materia"));
         viewTView.setItems(getStudents());
         viewBackButton.setOnAction(event -> {
             try {
@@ -77,11 +77,11 @@ public class ViewController {
         window.setScene(welcomeScene);
         window.show();
     }
-    public ObservableList<Student> getStudents() {
-        Student student;
+    public ObservableList<Masina> getStudents() {
+        Masina masina;
         String nume, prenume, materia;
         int varsta;
-        ObservableList<Student> students = FXCollections.observableArrayList();
+        ObservableList<Masina> students = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
@@ -95,7 +95,7 @@ public class ViewController {
                 varsta = Integer.parseInt(myRs.getString(4));
                 materia = myRs.getString(5);
                 System.out.println(nume+prenume+varsta+materia);
-                students.add(new Student(nume, prenume, varsta, materia));
+                students.add(new Masina(nume, prenume, varsta, materia));
             }
         } catch (SQLException e) {
             e.printStackTrace();

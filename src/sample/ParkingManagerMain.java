@@ -24,7 +24,6 @@ public class ParkingManagerMain {
 
     public static void main(String[] args) {
         boolean exit = false;
-        //setupGUI();
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String pass = "Pedrosz23";
