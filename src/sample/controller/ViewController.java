@@ -33,13 +33,25 @@ public class ViewController {
     private TableView<Masina> viewTView;
 
     @FXML
-    private TableColumn<Masina, String> viewPrenumeColumn;
+    private TableColumn<Masina, String> viewNumeClientColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewNumeColumn;
+    private TableColumn<Masina, String> viewnrInmatColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewMateriaColumn;
+    private TableColumn<Masina, String> viewMarcaColumn;
+
+    @FXML
+    private TableColumn<Masina, String> viewModelColumn;
+
+    @FXML
+    private TableColumn<Masina, String> viewColorColumn;
+
+    @FXML
+    private TableColumn<Masina, String> viewPDateColumn;
+
+    @FXML
+    private TableColumn<Masina, String> viewPhoneColumn;
 
     @FXML
     private Button viewExitButton;
@@ -53,11 +65,14 @@ public class ViewController {
 
     @FXML
     void initialize() {
-        viewNumeColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Nume"));
-        viewPrenumeColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Prenume"));
-        viewVarstaColumn.setCellValueFactory(new PropertyValueFactory<Masina,Integer>("Varsta"));
-        viewMateriaColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Materia"));
-        viewTView.setItems(getStudents());
+        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Client"));
+        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Registration"));
+        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Make"));
+        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Model"));
+        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Color"));
+        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("P-Date"));
+        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Phone"));
+        viewTView.setItems(getmasini());
         viewBackButton.setOnAction(event -> {
             try {
                 backScreenButtonPushed(event);
@@ -77,11 +92,10 @@ public class ViewController {
         window.setScene(welcomeScene);
         window.show();
     }
-    public ObservableList<Masina> getStudents() {
+    public ObservableList<Masina> getmasini() {
         Masina masina;
-        String nume, prenume, materia;
-        int varsta;
-        ObservableList<Masina> students = FXCollections.observableArrayList();
+        String numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon;
+        ObservableList<Masina> masini = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
@@ -90,16 +104,19 @@ public class ViewController {
             Statement myStmt = myConn.createStatement();
             ResultSet myRs = myStmt.executeQuery("select * from student");
             while (myRs.next()) {
-                nume = myRs.getString(2);
-                prenume = myRs.getString(3);
-                varsta = Integer.parseInt(myRs.getString(4));
-                materia = myRs.getString(5);
-                System.out.println(nume+prenume+varsta+materia);
-                //students.add(new Masina(nume, prenume, varsta, materia));
+                numeClient = myRs.getString(2);
+                nrInmat = myRs.getString(3);
+                marca = myRs.getString(4);
+                modelul = myRs.getString(5);
+                culoarea = myRs.getString(6);
+                dataParcare = myRs.getString(6);
+                nrTelefon = myRs.getString(6);
+                System.out.println(numeClient+nrInmat+marca+modelul+culoarea+dataParcare+nrTelefon);
+                masini.add(new Masina(numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return students;
+        return masini;
     }
 }
