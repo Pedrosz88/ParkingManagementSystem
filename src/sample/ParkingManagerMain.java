@@ -1,12 +1,26 @@
 package sample;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import sample.PM.Calculator;
 
 import java.sql.*;
 import java.text.ParseException;
 import java.util.Scanner;
 
-public class ParkingManagerMain {
+public class ParkingManagerMain extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("view/welcome.fxml"));
+        primaryStage.setTitle("Student Registration System");
+        primaryStage.setScene(new Scene(root, 700, 400));
+        primaryStage.show();
+    }
+
     static Scanner scan = new Scanner(System.in);
 
     public static void meniu() { // Sistem de Management pentru Parcari Private
@@ -23,6 +37,7 @@ public class ParkingManagerMain {
     }
 
     public static void main(String[] args) {
+        launch(args);
         boolean exit = false;
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
