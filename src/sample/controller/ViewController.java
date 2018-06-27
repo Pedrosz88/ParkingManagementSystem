@@ -1,10 +1,5 @@
 package sample.controller;
 
-import java.io.IOException;
-import java.net.URL;
-import java.sql.*;
-import java.util.ResourceBundle;
-
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,6 +15,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Masina;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
 
 public class ViewController {
 
@@ -57,21 +57,18 @@ public class ViewController {
     private Button viewExitButton;
 
     @FXML
-    private TableColumn<Masina, Integer> viewVarstaColumn;
-
-    @FXML
     private Button viewBackButton;
 
 
     @FXML
     void initialize() {
-        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Client"));
-        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Registration"));
-        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Make"));
-        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Model"));
-        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Color"));
-        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("P-Date"));
-        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina,String>("Phone"));
+        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Client"));
+        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Registration"));
+        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Make"));
+        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Model"));
+        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Color"));
+        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("P-Date"));
+        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Phone"));
         viewTView.setItems(getmasini());
         viewBackButton.setOnAction(event -> {
             try {
@@ -92,9 +89,10 @@ public class ViewController {
         window.setScene(welcomeScene);
         window.show();
     }
+
     public ObservableList<Masina> getmasini() {
         Masina masina;
-        String numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon;
+        String numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon;
         ObservableList<Masina> masini = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
@@ -111,8 +109,8 @@ public class ViewController {
                 culoarea = myRs.getString(6);
                 dataParcare = myRs.getString(7);
                 nrTelefon = myRs.getString(8);
-                System.out.println(numeClient+nrInmat+marca+modelul+culoarea+dataParcare+nrTelefon);
-                masini.add(new Masina(numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon));
+                System.out.println(numeClient + nrInmat + marca + modelul + culoarea + dataParcare + nrTelefon);
+                masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
             }
         } catch (SQLException e) {
             e.printStackTrace();
