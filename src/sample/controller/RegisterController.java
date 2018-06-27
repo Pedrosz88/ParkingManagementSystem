@@ -83,7 +83,7 @@ public class RegisterController {
         });
     }
     public void viewScreenButtonPushed(ActionEvent event) throws IOException {
-        Parent viewParent = FXMLLoader.load(getClass().getResource("../view/view.fxml"));
+        Parent viewParent = FXMLLoader.load(getClass().getResource("../view/viewAll.fxml"));
         Scene viewScene = new Scene(viewParent, 700, 450);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(viewScene);
