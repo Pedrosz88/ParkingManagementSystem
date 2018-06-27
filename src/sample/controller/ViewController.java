@@ -109,8 +109,8 @@ public class ViewController {
                 marca = myRs.getString(4);
                 modelul = myRs.getString(5);
                 culoarea = myRs.getString(6);
-                dataParcare = myRs.getString(6);
-                nrTelefon = myRs.getString(6);
+                dataParcare = myRs.getString(7);
+                nrTelefon = myRs.getString(8);
                 System.out.println(numeClient+nrInmat+marca+modelul+culoarea+dataParcare+nrTelefon);
                 masini.add(new Masina(numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon));
             }
