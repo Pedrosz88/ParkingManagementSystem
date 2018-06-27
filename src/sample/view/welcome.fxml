@@ -13,12 +13,12 @@
     <children>
         <AnchorPane layoutY="99.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
-                <Button fx:id="welcomeRegisterButton" layoutX="69.0" layoutY="106.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #E0B0FF;" text=" VIEW CLIENT DATA">
+                <Button fx:id="welcomeViewClientButton" layoutX="69.0" layoutY="106.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #E0B0FF;" text=" VIEW CLIENT DATA">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-                <Button fx:id="welcomeViewButton" contentDisplay="CENTER" layoutX="411.0" layoutY="60.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #ffad62;" text="VIEW ALL CLIENTS">
+                <Button fx:id="welcomeViewAllButton" contentDisplay="CENTER" layoutX="411.0" layoutY="60.0" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #ffad62;" text="VIEW ALL CLIENTS">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
@@ -28,32 +28,32 @@
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
-            <Button fx:id="welcomeRegisterButton1" layoutX="69.0" layoutY="60.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightgreen;" text="REGISTER CLIENT">
+            <Button fx:id="welcomeRegisterButton" layoutX="69.0" layoutY="60.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightgreen;" text="REGISTER CLIENT">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="welcomeRegisterButton11" layoutX="69.0" layoutY="196.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #f46886;" text="CHECKOUT CLIENT">
+            <Button fx:id="welcomeCheckoutClientButton" layoutX="69.0" layoutY="196.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #f46886;" text="CHECKOUT CLIENT">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="welcomeRegisterButton111" layoutX="69.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #FFFFCC;" text="MODIFY CLIENT DATA">
+            <Button fx:id="welcomeModifyClientButton" layoutX="69.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #FFFFCC;" text="MODIFY CLIENT DATA">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="welcomeRegisterButton1111" layoutX="411.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightblue;" text="SHOW CURRENT RATES">
+            <Button fx:id="welcomeCurrentRatesButton" layoutX="411.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightblue;" text="SHOW CURRENT RATES">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="welcomeRegisterButton11111" layoutX="411.0" layoutY="197.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightblue;" text="CHANGE RATES">
+            <Button fx:id="welcomeChangeRatesButton" layoutX="411.0" layoutY="197.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightblue;" text="CHANGE RATES">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="welcomeRegisterButton111111" layoutX="411.0" layoutY="106.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: ffad62;" text="PARKING LOT STATUS">
+            <Button fx:id="welcomeParkingStatusButton" layoutX="411.0" layoutY="106.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: ffad62;" text="PARKING LOT STATUS">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

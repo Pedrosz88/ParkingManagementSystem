@@ -95,7 +95,7 @@ public class ViewController {
                 varsta = Integer.parseInt(myRs.getString(4));
                 materia = myRs.getString(5);
                 System.out.println(nume+prenume+varsta+materia);
-                students.add(new Masina(nume, prenume, varsta, materia));
+                //students.add(new Masina(nume, prenume, varsta, materia));
             }
         } catch (SQLException e) {
             e.printStackTrace();
