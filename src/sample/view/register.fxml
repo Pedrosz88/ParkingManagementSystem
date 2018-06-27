@@ -54,17 +54,17 @@
             <TextField fx:id="registerNumeTField2" layoutX="451.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0" />
             <TextField fx:id="registerNumeTField21" layoutX="451.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0" />
             <TextField fx:id="registerNumeTField22" layoutX="451.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0" />
-            <Label layoutX="380.0" layoutY="163.0" prefHeight="27.0" prefWidth="54.0" text="Phone">
+            <Label layoutX="393.0" layoutY="163.0" prefHeight="27.0" prefWidth="54.0" text="Phone">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="380.0" layoutY="117.0" prefHeight="27.0" prefWidth="54.0" text="Date">
+            <Label layoutX="393.0" layoutY="117.0" prefHeight="27.0" prefWidth="54.0" text="Date">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="380.0" layoutY="74.0" prefHeight="27.0" prefWidth="54.0" text="Color">
+            <Label layoutX="393.0" layoutY="74.0" prefHeight="27.0" prefWidth="54.0" text="Color">
                <font>
                   <Font size="18.0" />
                </font>
