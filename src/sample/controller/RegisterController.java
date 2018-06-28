@@ -1,14 +1,6 @@
 package sample.controller;
-import java.io.IOException;
-import java.net.URL;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ResourceBundle;
 
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,9 +8,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ResourceBundle;
 
 public class RegisterController {
 
@@ -33,6 +32,9 @@ public class RegisterController {
 
     @FXML
     private Button registerRegisterButton;
+
+    @FXML
+    private Button viewBackButton;
 
     @FXML
     private Button registerExitButton;
@@ -69,7 +71,7 @@ public class RegisterController {
             String dataParcare = registerdataParcareTField.getText();
             String nrTelefon = registernrTelefonTField.getText();
 
-            addMasina(numeClient,nrInmat,marca,modelul,culoarea,dataParcare,nrTelefon);
+            addMasina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon);
         });
         registerViewButton.setOnAction(event -> {
             try {
@@ -78,10 +80,18 @@ public class RegisterController {
                 e.printStackTrace();
             }
         });
+        viewBackButton.setOnAction(event -> {
+            try {
+                backScreenButtonPushed(event);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
         registerExitButton.setOnAction(e -> {
             Platform.exit();
         });
     }
+
     public void viewScreenButtonPushed(ActionEvent event) throws IOException {
         Parent viewParent = FXMLLoader.load(getClass().getResource("../view/viewAll.fxml"));
         Scene viewScene = new Scene(viewParent, 700, 450);
@@ -89,7 +99,16 @@ public class RegisterController {
         window.setScene(viewScene);
         window.show();
     }
-    public void addMasina(String numeClient, String nrInmat, String marca, String modelul, String culoarea, String dataParcare, String nrTelefon){
+
+    public void backScreenButtonPushed(ActionEvent event) throws IOException {
+        Parent welcomeParent = FXMLLoader.load(getClass().getResource("../view/welcome.fxml"));
+        Scene welcomeScene = new Scene(welcomeParent, 700, 450);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(welcomeScene);
+        window.show();
+    }
+
+    public void addMasina(String numeClient, String nrInmat, String marca, String modelul, String culoarea, String dataParcare, String nrTelefon) {
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
