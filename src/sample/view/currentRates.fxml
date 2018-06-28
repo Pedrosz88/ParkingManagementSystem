@@ -25,11 +25,11 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-            <TableView layoutX="47.0" layoutY="80.0" prefHeight="68.0" prefWidth="606.0">
+            <TableView fx:id="viewTView" layoutX="47.0" layoutY="80.0" prefHeight="68.0" prefWidth="606.0">
               <columns>
-                <TableColumn prefWidth="197.0" style="-fx-background-color: #C0C0C0;" text="Daily Rate" />
-                <TableColumn prefWidth="191.0" style="-fx-background-color: #D3D3D3;" text="Between 2 and 7 days" />
-                  <TableColumn prefWidth="217.0" style="-fx-background-color: #E8E8E8;" text="Over 7 days" />
+                <TableColumn fx:id="viewDailyRateColumn" prefWidth="197.0" style="-fx-background-color: #C0C0C0;" text="Daily Rate" />
+                <TableColumn fx:id="view2_7DaysRateColumn" prefWidth="191.0" style="-fx-background-color: #D3D3D3;" text="Between 2 and 7 days" />
+                  <TableColumn fx:id="viewOver7DaysRateColumn" prefWidth="217.0" style="-fx-background-color: #E8E8E8;" text="Over 7 days" />
               </columns>
             </TableView>
             <Label layoutX="286.0" layoutY="30.0" text="Current Rates" textFill="#00000092">

@@ -25,8 +25,8 @@ DROP TABLE IF EXISTS `tarife`;
 CREATE TABLE `tarife` (
   `id` varchar(45) NOT NULL,
   `oZi` varchar(45) DEFAULT NULL,
-  `intre2si7zile` varchar(45) DEFAULT NULL,
-  `peste7zile` varchar(45) DEFAULT NULL,
+  `intreDouaSiSapteZile` varchar(45) DEFAULT NULL,
+  `pesteSapteZile` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-26 13:15:35
+-- Dump completed on 2018-06-28 16:19:46

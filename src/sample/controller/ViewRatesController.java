@@ -14,7 +14,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import sample.model.Masina;
 import sample.model.Tarif;
 
 import java.io.IOException;
@@ -31,28 +30,17 @@ public class ViewRatesController {
     private URL location;
 
     @FXML
-    private TableView<Masina> viewTView;
+    private TableView<Tarif> viewTView;
 
     @FXML
-    private TableColumn<Masina, String> viewNumeClientColumn;
+    private TableColumn<Tarif, Integer> viewDailyRateColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewnrInmatColumn;
+    private TableColumn<Tarif, Integer> view2_7DaysRateColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewMarcaColumn;
+    private TableColumn<Tarif, Integer> viewOver7DaysRateColumn;
 
-    @FXML
-    private TableColumn<Masina, String> viewModelColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewColorColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewPDateColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewPhoneColumn;
 
     @FXML
     private Button viewExitButton;
@@ -63,7 +51,10 @@ public class ViewRatesController {
 
     @FXML
     void initialize() {
-
+        viewDailyRateColumn.setCellValueFactory(new PropertyValueFactory<Tarif, Integer>("OZi"));
+        view2_7DaysRateColumn.setCellValueFactory(new PropertyValueFactory<Tarif, Integer>("IntreDouaSiSapteZile"));
+        viewOver7DaysRateColumn.setCellValueFactory(new PropertyValueFactory<Tarif, Integer>("PesteSapteZile"));
+        viewTView.setItems(getTarife());
         viewBackButton.setOnAction(event -> {
             try {
                 backScreenButtonPushed(event);
@@ -85,6 +76,7 @@ public class ViewRatesController {
     }
 
     public ObservableList<Tarif> getTarife() {
+        int oZi,intre2si7zile,peste7zile;
         ObservableList<Tarif> tarife = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
@@ -94,7 +86,10 @@ public class ViewRatesController {
             Statement myStmt = myConn.createStatement();
             ResultSet myRs = myStmt.executeQuery("select * from tarife");
             while (myRs.next()) {
-
+                oZi = myRs.getInt(2);
+                intre2si7zile = myRs.getInt(3);
+                peste7zile = myRs.getInt(4);
+                tarife.add(new Tarif(oZi,intre2si7zile,peste7zile));
             }
         } catch (SQLException e) {
             e.printStackTrace();

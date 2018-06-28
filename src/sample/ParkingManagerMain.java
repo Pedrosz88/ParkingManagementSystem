@@ -209,9 +209,9 @@ public class ParkingManagerMain extends Application {
         try {
             ResultSet rs = stmt2.executeQuery("SELECT * FROM proiect.tarife");
             while (rs.next()) {
-                int tf1Act = rs.getInt("oZi");
-                int tf2Act = rs.getInt("intre2si7zile");
-                int tf3Act = rs.getInt("peste7zile");
+                int tf1Act = rs.getInt(2);
+                int tf2Act = rs.getInt(3);
+                int tf3Act = rs.getInt(4);
                 System.out.println("\nTarifele actuale sunt: ");
                 System.out.println("  O zi: " + tf1Act + " Ron");
                 System.out.println("  Intre 2 si 7 zile: " + tf2Act + " Ron");
@@ -234,8 +234,8 @@ public class ParkingManagerMain extends Application {
             System.out.print("Tarif stationare peste 7 zile: ");
             int tf3Nou = scan.nextInt();
             stmt2.executeUpdate("UPDATE tarife set oZi = '" + tf1Nou + "'; ");
-            stmt2.executeUpdate("UPDATE tarife set intre2si7zile = '" + tf2Nou + "';");
-            stmt2.executeUpdate("UPDATE tarife set peste7zile = '" + tf3Nou + "';");
+            stmt2.executeUpdate("UPDATE tarife set intreDouaSiSapteZile = '" + tf2Nou + "';");
+            stmt2.executeUpdate("UPDATE tarife set pesteSapteZile = '" + tf3Nou + "';");
             scan.nextLine();
             System.out.println("\nTarifele au fost actualizate!");
         } catch (SQLException e) {

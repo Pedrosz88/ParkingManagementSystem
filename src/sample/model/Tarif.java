@@ -2,22 +2,22 @@ package sample.model;
 
 public class Tarif {
     int oZi;
-    int intre2si7zile;
-    int peste7zile;
+    int intreDouaSiSapteZile;
+    int pesteSapteZile;
 
-    public Tarif(int oZi,int intre2si7zile,int peste7zile){
+    public Tarif(int oZi,int intreDouaSiSapteZile,int pesteSapteZile){
         this.oZi=oZi;
-        this.intre2si7zile=intre2si7zile;
-        this.peste7zile=peste7zile;
+        this.intreDouaSiSapteZile=intreDouaSiSapteZile;
+        this.pesteSapteZile=pesteSapteZile;
     }
 
     public int getOZi(){
         return oZi;
     }
-    public int getIntre2si7zile(){
-        return intre2si7zile;
+    public int getIntreDouaSiSapteZile(){
+        return intreDouaSiSapteZile;
     }
-    public int getPeste7zile(){
-        return peste7zile;
+    public int getPesteSapteZile(){
+        return pesteSapteZile;
     }
 }
