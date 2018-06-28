@@ -8,6 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Blend?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegisterController">
     <children>
         <AnchorPane layoutX="1.0" layoutY="104.0" prefHeight="296.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
@@ -71,25 +73,26 @@
             </Label>
             </children>
         </AnchorPane>
-        <Label layoutX="140.0" layoutY="5.0" prefHeight="50.0" prefWidth="489.0" text="Parking Management System" textFill="WHITE">
+        <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="34.0" />
+                <Font name="System Bold" size="35.0" />
             </font>
         </Label>
-        <ImageView fitHeight="86.0" fitWidth="116.0" layoutX="22.0" layoutY="6.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.41" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@parking-garage.png" />
-            </image>
-        </ImageView>
-        <Label layoutX="415.0" layoutY="55.0" text="It's all in the details..." textFill="WHITE">
+        <Label layoutX="367.0" layoutY="57.0" opacity="0.94" text="  For a better parking experience ..." textFill="WHITE">
             <font>
-                <Font name="Lucida Calligraphy Italic" size="17.0" />
+                <Font name="Lucida Calligraphy Italic" size="15.0" />
             </font>
         </Label>
-        <ImageView fitHeight="77.0" fitWidth="39.0" layoutX="643.0" layoutY="10.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="77.0" fitWidth="130.0" layoutX="21.0" layoutY="6.0" opacity="0.86" pickOnBounds="true" rotate="4.1">
             <image>
-                <Image url="@parking-sign.png" />
+                <Image url="@parkinglot.png" />
             </image>
+            <effect>
+                <Blend />
+            </effect>
         </ImageView>
     </children>
+    <effect>
+        <InnerShadow blurType="ONE_PASS_BOX" color="#fafafab1" />
+    </effect>
 </AnchorPane>
