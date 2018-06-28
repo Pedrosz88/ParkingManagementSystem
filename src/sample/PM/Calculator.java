@@ -32,7 +32,7 @@ public class Calculator {
         ResultSet rs = null;
         long suma = 0;
         try {
-            rs = stmt2.executeQuery("SELECT * FROM proiect.tarife");
+            rs = stmt2.executeQuery("SELECT * FROM tarife");
             while (rs.next()) {
                 int tarif1 = rs.getInt("oZi");
                 int tarif2 = rs.getInt("intre2si7zile");

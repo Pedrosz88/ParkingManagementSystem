@@ -109,13 +109,13 @@ public class RegisterController {
     }
 
     public void addMasina(String numeClient, String nrInmat, String marca, String modelul, String culoarea, String dataParcare, String nrTelefon) {
-        String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            String insertDb = "insert into proiect.masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
+            String insertDb = "insert into masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
                     "values ('" + numeClient + "', '" + nrInmat + "', '" + marca + "', '" + modelul + "', '" + culoarea + "', '" + dataParcare + "', '" + nrTelefon + "')";
             System.out.println(insertDb);
             myStmt.executeUpdate(insertDb);

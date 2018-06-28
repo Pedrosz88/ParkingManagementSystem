@@ -95,7 +95,7 @@ public class ParkingManagerMain extends Application {
 
     public static void afiseazaClientiDB(Statement stmt) {
         try {
-            ResultSet rs = stmt.executeQuery("SELECT numeClient FROM proiect.masini");
+            ResultSet rs = stmt.executeQuery("SELECT numeClient FROM masini");
             System.out.print("Clienti existenti: ");
             while (rs.next()) {
                 String numeClient = rs.getString("numeClient");
@@ -111,7 +111,7 @@ public class ParkingManagerMain extends Application {
     public static void afiseazaDB(Statement stmt, String client) {
         ResultSet rs;
         try {
-            rs = stmt.executeQuery("SELECT * from proiect.masini WHERE numeClient = '" + client + "'");
+            rs = stmt.executeQuery("SELECT * from masini WHERE numeClient = '" + client + "'");
             if (rs.next()) {
                 System.out.println("\n-----------------------------------");
                 System.out.println("  Datele clientului " + client);
@@ -150,7 +150,7 @@ public class ParkingManagerMain extends Application {
             String dataParcare = scan.nextLine();
             System.out.print("Nr. telefon: ");
             String nrTelefon = scan.nextLine();
-            stmt.executeUpdate("insert into proiect.masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
+            stmt.executeUpdate("insert into masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
                     "values ('" + numeClient + "', '" + nrInmat + "', '" + marca + "', '" + modelul + "', '" + culoarea + "', '" + dataParcare + "', '" + nrTelefon + "')");
             System.out.println("Clientul a fost adaugat!");
         } catch (SQLException e) {
@@ -162,7 +162,7 @@ public class ParkingManagerMain extends Application {
         try {
             System.out.print("Numele clientului: ");
             String client = scan.nextLine();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM proiect.masini where numeClient = '" + client + "'");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM masini where numeClient = '" + client + "'");
             if (rs.next()) {
                 System.out.print("Informatia ce doriti sa o modificati (nrInmat/marca/modelul/culoarea/dataParcare/nrTelefon): ");
                 String colVeche = scan.nextLine();
@@ -170,7 +170,7 @@ public class ParkingManagerMain extends Application {
                 String info = scan.nextLine();
                 String infoVechi = null;
                 infoVechi = rs.getString(colVeche);
-                stmt.executeUpdate("UPDATE proiect.masini SET " + colVeche + " = REPLACE(" + colVeche + ", '" + infoVechi + "', '" + info + "') WHERE INSTR(numeClient, '" + client + "')");
+                stmt.executeUpdate("UPDATE masini SET " + colVeche + " = REPLACE(" + colVeche + ", '" + infoVechi + "', '" + info + "') WHERE INSTR(numeClient, '" + client + "')");
                 System.out.println("\nModificare efectuata cu succes!");
                 afiseazaDB(stmt, client);
             } else System.out.println("Client inexistent! Verificati numele introdus.");
@@ -184,7 +184,7 @@ public class ParkingManagerMain extends Application {
         System.out.print("Checkout client: ");
         String client = scan.nextLine();
         try {
-            rs = stmt.executeQuery("SELECT * FROM proiect.masini where numeClient = '" + client + "'");
+            rs = stmt.executeQuery("SELECT * FROM masini where numeClient = '" + client + "'");
             if (rs.next()) {
                 System.out.println("\n-----------------------------------");
                 System.out.println("       CHECKOUT  " + client);
@@ -195,7 +195,7 @@ public class ParkingManagerMain extends Application {
                 System.out.println("    Zile stationate: " + totalZile);
                 long totalPlata = Calculator.calculPlata(stmt2, totalZile);
                 System.out.println("    Total de plata: " + totalPlata + " Ron");
-                stmt.executeUpdate("DELETE FROM proiect.masini where numeClient = '" + client + "'");
+                stmt.executeUpdate("DELETE FROM masini where numeClient = '" + client + "'");
                 System.out.println("\n Clientul a fost scos din sistem!");
             } else System.out.println("Client inexistent! Verificati numele introdus.");
         } catch (SQLException e) {
@@ -225,7 +225,7 @@ public class ParkingManagerMain extends Application {
 
     public static void modificaTarife(Statement stmt2) {
         try {
-            ResultSet rs = stmt2.executeQuery("SELECT * FROM proiect.tarife");
+            ResultSet rs = stmt2.executeQuery("SELECT * FROM tarife");
             afiseazaTarife(stmt2);
             System.out.print("\nTariful nou pentru stationare 1 zi: ");
             int tf1Nou = scan.nextInt();
@@ -233,9 +233,9 @@ public class ParkingManagerMain extends Application {
             int tf2Nou = scan.nextInt();
             System.out.print("Tarif stationare peste 7 zile: ");
             int tf3Nou = scan.nextInt();
-            stmt2.executeUpdate("UPDATE proiect.tarife set oZi = '" + tf1Nou + "'; ");
-            stmt2.executeUpdate("UPDATE proiect.tarife set intre2si7zile = '" + tf2Nou + "';");
-            stmt2.executeUpdate("UPDATE proiect.tarife set peste7zile = '" + tf3Nou + "';");
+            stmt2.executeUpdate("UPDATE tarife set oZi = '" + tf1Nou + "'; ");
+            stmt2.executeUpdate("UPDATE tarife set intre2si7zile = '" + tf2Nou + "';");
+            stmt2.executeUpdate("UPDATE tarife set peste7zile = '" + tf3Nou + "';");
             scan.nextLine();
             System.out.println("\nTarifele au fost actualizate!");
         } catch (SQLException e) {

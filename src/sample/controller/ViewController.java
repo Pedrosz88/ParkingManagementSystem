@@ -93,13 +93,13 @@ public class ViewController {
     public ObservableList<Masina> getMasini() {
         String numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon;
         ObservableList<Masina> masini = FXCollections.observableArrayList();
-        String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("select * from proiect.masini");
+            ResultSet myRs = myStmt.executeQuery("select * from masini");
             while (myRs.next()) {
                 numeClient = myRs.getString(2);
                 nrInmat = myRs.getString(3);

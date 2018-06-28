@@ -15,13 +15,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Masina;
+import sample.model.Tarif;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class ViewClientController {
+public class ViewRatesController {
 
     @FXML
     private ResourceBundle resources;
@@ -59,6 +60,7 @@ public class ViewClientController {
     @FXML
     private Button viewBackButton;
 
+
     @FXML
     void initialize() {
 
@@ -69,7 +71,6 @@ public class ViewClientController {
                 e.printStackTrace();
             }
         });
-
         viewExitButton.setOnAction(e -> {
             Platform.exit();
         });
@@ -83,30 +84,21 @@ public class ViewClientController {
         window.show();
     }
 
-    public ObservableList<Masina> getMasini() {
-        String numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon;
-        ObservableList<Masina> masini = FXCollections.observableArrayList();
+    public ObservableList<Tarif> getTarife() {
+        ObservableList<Tarif> tarife = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("select * from masini");
+            ResultSet myRs = myStmt.executeQuery("select * from tarife");
             while (myRs.next()) {
-                numeClient = myRs.getString(2);
-                nrInmat = myRs.getString(3);
-                marca = myRs.getString(4);
-                modelul = myRs.getString(5);
-                culoarea = myRs.getString(6);
-                dataParcare = myRs.getString(7);
-                nrTelefon = myRs.getString(8);
-                System.out.println("\n"+numeClient +" "+ nrInmat +" "+ marca +" "+ modelul +" "+ culoarea +" "+ dataParcare +" "+ nrTelefon);
-                masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return masini;
+        return tarife;
     }
 }
