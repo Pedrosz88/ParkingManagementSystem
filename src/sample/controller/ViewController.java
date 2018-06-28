@@ -100,7 +100,7 @@ public class ViewController {
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("select * from student");
+            ResultSet myRs = myStmt.executeQuery("select * from masini");
             while (myRs.next()) {
                 numeClient = myRs.getString(2);
                 nrInmat = myRs.getString(3);
