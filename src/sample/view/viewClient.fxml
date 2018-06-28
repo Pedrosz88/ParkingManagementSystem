@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewClientController">
     <children>
-        <AnchorPane layoutX="1.0" layoutY="104.0" prefHeight="296.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
+        <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
                 <Button layoutX="547.0" layoutY="29.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="106.0" style="-fx-background-color: grey;" text="SEARCH" textFill="WHITE">
                     <font>

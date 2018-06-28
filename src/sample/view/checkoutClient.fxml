@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sample.view.CheckoutClient"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewClientController">
+    <children>
+        <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
+            <children>
+                <Button layoutX="547.0" layoutY="29.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="106.0" style="-fx-background-color: grey;" text="SEARCH" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="viewExitButton" layoutX="493.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+                <TextField layoutX="182.0" layoutY="29.0" prefHeight="31.0" prefWidth="345.0" />
+                <Label layoutX="25.0" layoutY="31.0" prefHeight="27.0" prefWidth="148.0" text="Search for client :">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="viewBackButton" layoutX="285.0" layoutY="228.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+                <TableView fx:id="viewTView" layoutY="78.0" prefHeight="99.0" prefWidth="700.0">
+                    <columns>
+                        <TableColumn fx:id="viewNumeClientColumn" prefWidth="176.0" text="Client" />
+                        <TableColumn fx:id="viewnrInmatColumn" prefWidth="82.0" text="Registration" />
+                        <TableColumn fx:id="viewMarcaColumn" prefWidth="99.0" text="Make" />
+                        <TableColumn fx:id="viewModelColumn" prefWidth="81.0" text="Model" />
+                        <TableColumn fx:id="viewColorColumn" prefWidth="74.0" text="Color" />
+                        <TableColumn fx:id="viewPDateColumn" prefWidth="91.0" text="Parking Date" />
+                        <TableColumn fx:id="viewPhoneColumn" prefWidth="96.0" text="Phone" />
+                    </columns>
+                </TableView>
+            <Button layoutX="76.0" layoutY="228.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CHECKOUT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="35.0" />
+            </font>
+        </Label>
+        <Label layoutX="367.0" layoutY="57.0" opacity="0.94" text="  For a better parking experience ..." textFill="WHITE">
+            <font>
+                <Font name="Lucida Calligraphy Italic" size="15.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="77.0" fitWidth="130.0" layoutX="21.0" layoutY="6.0" opacity="0.86" pickOnBounds="true" rotate="4.1">
+            <image>
+                <Image url="@parkinglot.png" />
+            </image>
+            <effect>
+                <Blend />
+            </effect>
+        </ImageView>
+    </children>
+    <effect>
+        <InnerShadow blurType="ONE_PASS_BOX" color="#fafafab1" />
+    </effect>
 </AnchorPane>
