@@ -62,14 +62,14 @@ public class ViewController {
 
     @FXML
     void initialize() {
-        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Client"));
-        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Registration"));
-        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Make"));
-        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Model"));
-        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Color"));
-        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("P-Date"));
-        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Phone"));
-        viewTView.setItems(getmasini());
+        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NumeClient"));
+        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrInmat"));
+        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Marca"));
+        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Modelul"));
+        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoare"));
+        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("DataParcare"));
+        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrTelefon"));
+        viewTView.setItems(getMasini());
         viewBackButton.setOnAction(event -> {
             try {
                 backScreenButtonPushed(event);
@@ -90,8 +90,7 @@ public class ViewController {
         window.show();
     }
 
-    public ObservableList<Masina> getmasini() {
-        Masina masina;
+    public ObservableList<Masina> getMasini() {
         String numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon;
         ObservableList<Masina> masini = FXCollections.observableArrayList();
         String dbUrl = "jdbc:mysql://localhost/admin?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
@@ -100,7 +99,7 @@ public class ViewController {
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("select * from masini");
+            ResultSet myRs = myStmt.executeQuery("select * from proiect.masini");
             while (myRs.next()) {
                 numeClient = myRs.getString(2);
                 nrInmat = myRs.getString(3);
@@ -109,7 +108,7 @@ public class ViewController {
                 culoarea = myRs.getString(6);
                 dataParcare = myRs.getString(7);
                 nrTelefon = myRs.getString(8);
-                System.out.println(numeClient + nrInmat + marca + modelul + culoarea + dataParcare + nrTelefon);
+                System.out.println("\n"+numeClient +" "+ nrInmat +" "+ marca +" "+ modelul +" "+ culoarea +" "+ dataParcare +" "+ nrTelefon);
                 masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
             }
         } catch (SQLException e) {
