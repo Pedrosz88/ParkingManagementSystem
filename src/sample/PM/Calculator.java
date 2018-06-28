@@ -34,9 +34,9 @@ public class Calculator {
         try {
             rs = stmt2.executeQuery("SELECT * FROM tarife");
             while (rs.next()) {
-                int tarif1 = rs.getInt("oZi");
-                int tarif2 = rs.getInt("intre2si7zile");
-                int tarif3 = rs.getInt("peste7zile");
+                int tarif1 = rs.getInt(2);
+                int tarif2 = rs.getInt(3);
+                int tarif3 = rs.getInt(4);
                 if (totalZile == 1) suma = totalZile * tarif1;
                 else if (totalZile <= 7) suma = totalZile * tarif2;
                 else suma = totalZile * tarif3;
