@@ -25,16 +25,16 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-            <TableView fx:id="viewTView" layoutX="47.0" layoutY="80.0" prefHeight="68.0" prefWidth="606.0">
+            <TableView fx:id="viewTView" layoutX="102.0" layoutY="83.0" prefHeight="67.0" prefWidth="479.0">
               <columns>
-                <TableColumn fx:id="viewDailyRateColumn" prefWidth="197.0" style="-fx-background-color: #C0C0C0;" text="Daily Rate" />
-                <TableColumn fx:id="view2_7DaysRateColumn" prefWidth="191.0" style="-fx-background-color: #D3D3D3;" text="Between 2 and 7 days" />
-                  <TableColumn fx:id="viewOver7DaysRateColumn" prefWidth="217.0" style="-fx-background-color: #E8E8E8;" text="Over 7 days" />
+                <TableColumn fx:id="viewDailyRateColumn" prefWidth="158.0" style="-fx-alignment: center; -fx-font-size: 15; -fx-font-weight: bold;" text="Daily Rate" />
+                <TableColumn fx:id="view2_7DaysRateColumn" prefWidth="162.0" style="-fx-font-size: 15; -fx-alignment: center; -fx-font-weight: bold;" text="Between 2 and 7 days" />
+                  <TableColumn fx:id="viewOver7DaysRateColumn" prefWidth="157.0" style="-fx-alignment: center; -fx-font-size: 15; -fx-font-weight: bold;" text="Over 7 days" />
               </columns>
             </TableView>
-            <Label layoutX="286.0" layoutY="30.0" text="Current Rates" textFill="#00000092">
+            <Label layoutX="264.0" layoutY="23.0" text="Current Rates" textFill="#00000038">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="System Bold" size="27.0" />
                </font>
             </Label>
             </children>
