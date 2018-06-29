@@ -161,7 +161,7 @@ public class WelcomeController {
     }
 
     public void welcomeCurrentRatesButtonPushed(ActionEvent event) throws IOException {
-        Parent registerParent = FXMLLoader.load(getClass().getResource("../view/currentRates.fxml"));
+        Parent registerParent = FXMLLoader.load(getClass().getResource("../view/currentFees.fxml"));
         Scene currentRatesScene = new Scene(registerParent, 700, 450);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(currentRatesScene);
@@ -169,7 +169,7 @@ public class WelcomeController {
     }
 
     public void welcomeChangeRatesButtonPushed(ActionEvent event) throws IOException {
-        Parent registerParent = FXMLLoader.load(getClass().getResource("../view/changeRates.fxml"));
+        Parent registerParent = FXMLLoader.load(getClass().getResource("../view/changeFees.fxml"));
         Scene changeRatesScene = new Scene(registerParent, 700, 450);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(changeRatesScene);

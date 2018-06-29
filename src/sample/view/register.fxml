@@ -8,18 +8,20 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegisterController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
-                <Button fx:id="registerRegisterButton" layoutX="33.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="166.0" style="-fx-background-color: grey;" text="REGISTER" textFill="WHITE">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
+                <Button fx:id="registerRegisterButton" layoutX="31.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="154.0" style="-fx-background-color: grey;" text="REGISTER" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="registerViewButton" layoutX="226.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="124.0" style="-fx-background-color: grey;" text="VIEW ALL" textFill="WHITE">
+                <Button fx:id="registerViewButton" layoutX="215.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: grey;" text="SHOW ALL" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
@@ -32,50 +34,50 @@
                 <TextField fx:id="registernumeClientTField" layoutX="145.0" layoutY="29.0" prefHeight="31.0" prefWidth="511.0" />
                 <TextField fx:id="registernrInmatTField" layoutX="145.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0" />
                 <TextField fx:id="registermarcaTField" layoutX="145.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0" />
-                <Label layoutX="30.0" layoutY="31.0" prefHeight="27.0" prefWidth="54.0" text="Client">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="30.0" layoutY="74.0" prefHeight="27.0" prefWidth="98.0" text="Registration">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="33.0" layoutY="117.0" prefHeight="21.0" prefWidth="91.0" text="Make">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
-                <Label layoutX="33.0" layoutY="163.0" prefHeight="21.0" prefWidth="91.0" text="Model">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                </Label>
             <TextField fx:id="registermodelulTField" layoutX="145.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0" />
             <TextField fx:id="registerdataParcareTField" layoutX="451.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0" />
             <TextField fx:id="registerculoareaTField" layoutX="451.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0" />
             <TextField fx:id="registernrTelefonTField" layoutX="451.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0" />
-            <Label layoutX="393.0" layoutY="163.0" prefHeight="27.0" prefWidth="54.0" text="Phone">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="393.0" layoutY="117.0" prefHeight="27.0" prefWidth="54.0" text="Date">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="393.0" layoutY="74.0" prefHeight="27.0" prefWidth="54.0" text="Color">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
             <Button fx:id="viewBackButton" layoutX="378.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
+            <Label layoutX="22.0" layoutY="26.0" prefHeight="38.0" prefWidth="116.0" text=" Client name " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="69.0" prefHeight="38.0" prefWidth="124.0" text=" Registration " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="49.0" layoutY="112.0" prefHeight="38.0" prefWidth="117.0" text="Car Make " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="158.0" prefHeight="38.0" prefWidth="117.0" text="Car Model " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="397.0" layoutY="69.0" prefHeight="38.0" prefWidth="47.0" text="Color" textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="112.0" prefHeight="38.0" prefWidth="41.0" text="Date" textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="389.0" layoutY="158.0" prefHeight="38.0" prefWidth="55.0" text="Phone" textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
             </children>
         </AnchorPane>
         <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">

@@ -9,12 +9,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewRatesController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
                 <Button fx:id="viewExitButton" layoutX="420.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
@@ -25,16 +27,16 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-            <TableView fx:id="viewTView" layoutX="102.0" layoutY="83.0" prefHeight="67.0" prefWidth="479.0">
+            <TableView fx:id="viewTView" layoutX="103.0" layoutY="98.0" prefHeight="67.0" prefWidth="479.0">
               <columns>
                 <TableColumn fx:id="viewDailyRateColumn" prefWidth="158.0" style="-fx-alignment: center; -fx-font-size: 15; -fx-font-weight: bold;" text="Daily Rate" />
                 <TableColumn fx:id="view2_7DaysRateColumn" prefWidth="162.0" style="-fx-font-size: 15; -fx-alignment: center; -fx-font-weight: bold;" text="Between 2 and 7 days" />
                   <TableColumn fx:id="viewOver7DaysRateColumn" prefWidth="157.0" style="-fx-alignment: center; -fx-font-size: 15; -fx-font-weight: bold;" text="Over 7 days" />
               </columns>
             </TableView>
-            <Label layoutX="264.0" layoutY="23.0" text="Current Rates" textFill="#00000038">
+            <Label layoutX="252.0" layoutY="40.0" text="CURRENT RATES" textFill="#00000038">
                <font>
-                  <Font name="System Bold" size="27.0" />
+                  <Font name="System Bold" size="23.0" />
                </font>
             </Label>
             </children>
