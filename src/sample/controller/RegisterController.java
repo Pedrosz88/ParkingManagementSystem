@@ -70,7 +70,6 @@ public class RegisterController {
             String culoarea = registerculoareaTField.getText();
             String dataParcare = registerdataParcareTField.getText();
             String nrTelefon = registernrTelefonTField.getText();
-
             addMasina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon);
         });
         registerViewButton.setOnAction(event -> {
