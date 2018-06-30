@@ -2,6 +2,7 @@ package sample.controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -20,13 +21,16 @@ import java.sql.Statement;
 public class ChangeFeesController {
 
     @FXML
-    private TextField changeFeesDailyButton;
+    private TextField changeFeesDailyText;
 
     @FXML
-    private TextField changeFeesBetweenButton;
+    private TextField changeFeesBetweenText;
 
     @FXML
-    private TextField changeFeesOverButton;
+    private TextField changeFeesOverText;
+
+    @FXML
+    private TextField changeFeesResultText;
 
     @FXML
     private Button modifyFeesButton;
@@ -41,10 +45,11 @@ public class ChangeFeesController {
     @FXML
     void initialize() {
         modifyFeesButton.setOnAction(event -> {
-            int dailyFee = Integer.valueOf(changeFeesDailyButton.getText());
-            int betweenFee = Integer.valueOf(changeFeesBetweenButton.getText());
-            int overFee = Integer.valueOf(changeFeesOverButton.getText());
+            int dailyFee = Integer.valueOf(changeFeesDailyText.getText());
+            int betweenFee = Integer.valueOf(changeFeesBetweenText.getText());
+            int overFee = Integer.valueOf(changeFeesOverText.getText());
             changeFees(dailyFee, betweenFee, overFee);
+                modifyFeesButton.setText("DONE!");
         });
 
         viewBackButton.setOnAction(event -> {
