@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Tarif;
@@ -21,7 +22,7 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class ViewRatesController {
+public class ViewFeesController {
 
     @FXML
     private ResourceBundle resources;
@@ -40,7 +41,6 @@ public class ViewRatesController {
 
     @FXML
     private TableColumn<Tarif, Integer> viewOver7DaysRateColumn;
-
 
     @FXML
     private Button viewExitButton;

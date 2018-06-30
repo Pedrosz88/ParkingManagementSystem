@@ -38,58 +38,58 @@ public class ParkingManagerMain extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        boolean exit = false;
-        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
-        String user = "root";
-        String pass = "Pedrosz23";
-        meniu();
-        try {
-            Connection con = DriverManager.getConnection(dbUrl, user, pass);
-            Statement stmt = con.createStatement();
-            Statement stmt2 = con.createStatement();
-            while (exit == false) {
-                System.out.println("\n Meniu: m ");
-                System.out.print(">> Optiune: ");
-                String opt = scan.nextLine();
-                String optiune = opt.toLowerCase();
-                switch (optiune) {
-                    case "m":
-                        meniu();
-                        break;
-                    case "1":
-                        afiseazaClientiDB(stmt);
-                        break;
-                    case "2":
-                        System.out.print("Afiseaza datele clientului: ");
-                        String client = scan.nextLine();
-                        afiseazaDB(stmt, client);
-                        break;
-                    case "3":
-                        afiseazaTarife(stmt2);
-                        break;
-                    case "4":
-                        adaugaClientDB(stmt);
-                        break;
-                    case "5":
-                        modificaClientDB(stmt);
-                        break;
-                    case "6":
-                        checkout(stmt, stmt2);
-                        break;
-                    case "7":
-                        modificaTarife(stmt2);
-                        break;
-                    case "0":
-                        System.out.println("\nLa revedere!");
-                        exit = true;
-                        break;
-                    default:
-                        System.out.println("Optiune gresita!");
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        boolean exit = false;
+//        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+//        String user = "root";
+//        String pass = "Pedrosz23";
+//        meniu();
+//        try {
+//            Connection con = DriverManager.getConnection(dbUrl, user, pass);
+//            Statement stmt = con.createStatement();
+//            Statement stmt2 = con.createStatement();
+//            while (exit == false) {
+//                System.out.println("\n Meniu: m ");
+//                System.out.print(">> Optiune: ");
+//                String opt = scan.nextLine();
+//                String optiune = opt.toLowerCase();
+//                switch (optiune) {
+//                    case "m":
+//                        meniu();
+//                        break;
+//                    case "1":
+//                        afiseazaClientiDB(stmt);
+//                        break;
+//                    case "2":
+//                        System.out.print("Afiseaza datele clientului: ");
+//                        String client = scan.nextLine();
+//                        afiseazaDB(stmt, client);
+//                        break;
+//                    case "3":
+//                        afiseazaTarife(stmt2);
+//                        break;
+//                    case "4":
+//                        adaugaClientDB(stmt);
+//                        break;
+//                    case "5":
+//                        modificaClientDB(stmt);
+//                        break;
+//                    case "6":
+//                        checkout(stmt, stmt2);
+//                        break;
+//                    case "7":
+//                        modificaTarife(stmt2);
+//                        break;
+//                    case "0":
+//                        System.out.println("\nLa revedere!");
+//                        exit = true;
+//                        break;
+//                    default:
+//                        System.out.println("Optiune gresita!");
+//                }
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
     }
 
 
