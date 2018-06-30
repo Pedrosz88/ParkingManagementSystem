@@ -9,10 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Masina;
@@ -22,30 +19,30 @@ import java.net.URL;
 import java.sql.*;
 import java.util.ResourceBundle;
 
-public class ViewClientController {
+public class ModifyClientController {
     @FXML
-    private TableView<Masina> viewTView;
+    private TableView<Masina> modifyTView;
 
     @FXML
-    private TableColumn<Masina, String> viewNumeClientColumn;
+    private TableColumn<Masina, String> modifyNumeClientColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewnrInmatColumn;
+    private TableColumn<Masina, String> modifynrInmatColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewMarcaColumn;
+    private TableColumn<Masina, String> modifyMarcaColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewModelColumn;
+    private TableColumn<Masina, String> modifyModelColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewColorColumn;
+    private TableColumn<Masina, String> modifyColorColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewPDateColumn;
+    private TableColumn<Masina, String> modifyPDateColumn;
 
     @FXML
-    private TableColumn<Masina, String> viewPhoneColumn;
+    private TableColumn<Masina, String> modifyPhoneColumn;
 
     @FXML
     private TextField findnumeClientTField;
@@ -59,9 +56,13 @@ public class ViewClientController {
     @FXML
     public Button viewSearchButton;
 
+    @FXML
+    private ChoiceBox<String> modifyClientCBox;
+
 
     @FXML
     void initialize() {
+        modifyClientCBox.setItems(FXCollections.observableArrayList("Client", "Registration", "Make", "Model", "Color", "Parking Date", "Phone"));
 
         viewSearchButton.setOnAction(event -> {
             try {
@@ -121,14 +122,14 @@ public class ViewClientController {
     public void viewSearchButtonPushed(ActionEvent event) throws IOException {
         String numeCautat = (findnumeClientTField.getText());
         if (numeCautat!=null){
-        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NumeClient"));
-        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrInmat"));
-        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Marca"));
-        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Modelul"));
-        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoare"));
-        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("DataParcare"));
-        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrTelefon"));
-        viewTView.setItems(getMasini(numeCautat));
-    } else {viewNumeClientColumn.setCellValueFactory(null);}
+            modifyNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NumeClient"));
+            modifynrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrInmat"));
+            modifyMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Marca"));
+            modifyModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Modelul"));
+            modifyColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoare"));
+            modifyPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("DataParcare"));
+            modifyPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrTelefon"));
+            modifyTView.setItems(getMasini(numeCautat));
+        } else {modifyNumeClientColumn.setCellValueFactory(null);}
     }
 }

@@ -15,13 +15,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 public class WelcomeController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
     @FXML
     private Button welcomeExitButton;
 

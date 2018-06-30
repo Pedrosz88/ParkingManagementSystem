@@ -2,7 +2,6 @@ package sample.controller;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -49,7 +48,7 @@ public class ChangeFeesController {
             int betweenFee = Integer.valueOf(changeFeesBetweenText.getText());
             int overFee = Integer.valueOf(changeFeesOverText.getText());
             changeFees(dailyFee, betweenFee, overFee);
-                modifyFeesButton.setText("DONE!");
+            modifyFeesButton.setText("DONE!");
         });
 
         viewBackButton.setOnAction(event -> {

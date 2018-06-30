@@ -24,12 +24,6 @@ import java.util.ResourceBundle;
 public class ViewController {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private TableView<Masina> viewTView;
 
     @FXML

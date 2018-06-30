@@ -23,13 +23,6 @@ import java.sql.*;
 import java.util.ResourceBundle;
 
 public class ViewFeesController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
     @FXML
     private TableView<Tarif> viewTView;
 

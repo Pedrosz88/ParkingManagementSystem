@@ -18,6 +18,7 @@
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
+                <TextField fx:id="findnumeClientTField" layoutX="161.0" layoutY="59.0" prefHeight="31.0" prefWidth="329.0" />
                 <Button fx:id="viewSearchButton" layoutX="484.0" layoutY="58.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="99.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="15.0" />
@@ -28,7 +29,6 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <TextField fx:id="findnumeClientTField" layoutX="166.0" layoutY="58.0" prefHeight="31.0" prefWidth="318.0" />
                 <Button fx:id="viewBackButton" layoutX="144.0" layoutY="228.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
