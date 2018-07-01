@@ -34,7 +34,7 @@
                   <TableColumn fx:id="viewOver7DaysRateColumn" prefWidth="157.0" style="-fx-alignment: center; -fx-font-size: 15; -fx-font-weight: bold;" text="Over 7 days" />
               </columns>
             </TableView>
-            <Label layoutX="252.0" layoutY="40.0" text="CURRENT RATES" textFill="#00000038">
+            <Label layoutX="262.0" layoutY="39.0" text="CURRENT FEES" textFill="#00000038">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
