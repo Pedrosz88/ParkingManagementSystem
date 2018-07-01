@@ -60,7 +60,7 @@ public class ViewController {
         viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrInmat"));
         viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Marca"));
         viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Modelul"));
-        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoare"));
+        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoarea"));
         viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("DataParcare"));
         viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrTelefon"));
         viewTView.setItems(getMasini());
@@ -92,17 +92,16 @@ public class ViewController {
         String password = "Pedrosz23";
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
-            Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("select * from masini");
-            while (myRs.next()) {
-                numeClient = myRs.getString(2);
-                nrInmat = myRs.getString(3);
-                marca = myRs.getString(4);
-                modelul = myRs.getString(5);
-                culoarea = myRs.getString(6);
-                dataParcare = myRs.getString(7);
-                nrTelefon = myRs.getString(8);
-                System.out.println("\n"+numeClient +" "+ nrInmat +" "+ marca +" "+ modelul +" "+ culoarea +" "+ dataParcare +" "+ nrTelefon);
+            Statement myStatement = myConn.createStatement();
+            ResultSet myRes = myStatement.executeQuery("select * from masini");
+            while (myRes.next()) {
+                numeClient = myRes.getString(2);
+                nrInmat = myRes.getString(3);
+                marca = myRes.getString(4);
+                modelul = myRes.getString(5);
+                culoarea = myRes.getString(6);
+                dataParcare = myRes.getString(7);
+                nrTelefon = myRes.getString(8);
                 masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
             }
         } catch (SQLException e) {

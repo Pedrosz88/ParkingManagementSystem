@@ -5,16 +5,16 @@ public class Masina {
     String nrInmat;
     String marca;
     String modelul;
-    String culoare;
+    String culoarea;
     String dataParcare;
     String nrTelefon;
 
-    public Masina(String numeClient, String nrInmat, String marca, String modelul, String culoare, String dataParcare, String nrTelefon) {
+    public Masina(String numeClient, String nrInmat, String marca, String modelul, String culoarea, String dataParcare, String nrTelefon) {
         this.numeClient = numeClient;
         this.nrInmat = nrInmat;
         this.marca = marca;
         this.modelul = modelul;
-        this.culoare = culoare;
+        this.culoarea = culoarea;
         this.dataParcare = dataParcare;
         this.nrTelefon = nrTelefon;
     }
@@ -35,15 +35,14 @@ public class Masina {
         return modelul;
     }
 
-    public String getCuloare() {
-        return culoare;
+    public String getCuloarea() {
+        return culoarea;
     }
 
-    public String getDataParcare() {
-        return dataParcare;
-    }
+    public String getDataParcare() { return dataParcare; }
 
     public String getNrTelefon() {
         return nrTelefon;
     }
+
 }

@@ -10,45 +10,29 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import sample.model.Masina;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
-import java.util.ResourceBundle;
 
-public class ViewClientController {
-    @FXML
-    private TableView<Masina> viewTView;
-
-    @FXML
-    private TableColumn<Masina, String> viewNumeClientColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewnrInmatColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewMarcaColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewModelColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewColorColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewPDateColumn;
-
-    @FXML
-    private TableColumn<Masina, String> viewPhoneColumn;
+public class CheckoutClientController {
 
     @FXML
     private TextField findnumeClientTField;
+
+    @FXML
+    private TextField parkingDateTField;
+
+    @FXML
+    private TextField daysParkedTField;
+
+    @FXML
+    private TextField statusTField;
+
+    @FXML
+    private TextField toPayTField;
 
     @FXML
     private Button viewExitButton;
@@ -57,19 +41,8 @@ public class ViewClientController {
     private Button viewBackButton;
 
     @FXML
-    public Button viewSearchButton;
-
-
-    @FXML
     void initialize() {
 
-        viewSearchButton.setOnAction(event -> {
-            try {
-                viewSearchButtonPushed(event);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
         viewBackButton.setOnAction(event -> {
             try {
                 backScreenButtonPushed(event);
@@ -118,17 +91,4 @@ public class ViewClientController {
         window.show();
     }
 
-    public void viewSearchButtonPushed(ActionEvent event) throws IOException {
-        String numeCautat = (findnumeClientTField.getText());
-        if (numeCautat!=null){
-        viewNumeClientColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NumeClient"));
-        viewnrInmatColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrInmat"));
-        viewMarcaColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Marca"));
-        viewModelColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Modelul"));
-        viewColorColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("Culoarea"));
-        viewPDateColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("DataParcare"));
-        viewPhoneColumn.setCellValueFactory(new PropertyValueFactory<Masina, String>("NrTelefon"));
-        viewTView.setItems(getMasini(numeCautat));
-    } else {viewNumeClientColumn.setCellValueFactory(null);}
-    }
 }

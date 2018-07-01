@@ -77,11 +77,12 @@ public class ChangeFeesController {
         String user = "root";
         String password = "Pedrosz23";
         try {
-            Connection myConn = DriverManager.getConnection(dbUrl, user, password);
-            Statement myStmt = myConn.createStatement();
-            myStmt.executeUpdate("UPDATE tarife set oZi = '" + dailyFee + "'; ");
-            myStmt.executeUpdate("UPDATE tarife set intreDouaSiSapteZile = '" + betweenFee + "';");
-            myStmt.executeUpdate("UPDATE tarife set pesteSapteZile = '" + overFee + "';");
+                Connection myConn = DriverManager.getConnection(dbUrl, user, password);
+                Statement myStmt = myConn.createStatement();
+                myStmt.executeUpdate("UPDATE tarife set oZi = '" + dailyFee + "'; ");
+                myStmt.executeUpdate("UPDATE tarife set intreDouaSiSapteZile = '" + betweenFee + "';");
+                myStmt.executeUpdate("UPDATE tarife set pesteSapteZile = '" + overFee + "';");
+
         } catch (SQLException e) {
             e.printStackTrace();
         }

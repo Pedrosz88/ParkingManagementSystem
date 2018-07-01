@@ -18,11 +18,11 @@
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
-                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="185.0" layoutY="31.0" prefHeight="31.0" prefWidth="298.0">
+                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="219.0" layoutY="32.0" prefHeight="31.0" prefWidth="248.0">
                <font>
                   <Font size="15.0" />
                </font></TextField>
-                <Button fx:id="viewSearchButton" layoutX="478.0" layoutY="31.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="SEARCH" textAlignment="CENTER" textFill="#575656">
+                <Button fx:id="viewSearchButton" layoutX="459.0" layoutY="32.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="SEARCH" textAlignment="CENTER" textFill="#575656">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="14.0" />
                     </font>
@@ -53,7 +53,7 @@
                         <TableColumn fx:id="viewPhoneColumn" prefWidth="122.0" style="-fx-alignment: center;" text="Phone" />
                     </columns>
                 </TableView>
-            <Label layoutX="89.0" layoutY="28.0" prefHeight="38.0" prefWidth="96.0" text="Full name:" textFill="#a8a7a7">
+            <Label layoutX="76.0" layoutY="29.0" prefHeight="38.0" prefWidth="135.0" text="Enter full name:" textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

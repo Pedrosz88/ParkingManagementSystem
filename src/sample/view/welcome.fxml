@@ -14,11 +14,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.WelcomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="750.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.WelcomeController">
     <children>
-        <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
+        <AnchorPane layoutY="88.0" prefHeight="311.0" prefWidth="750.0" style="-fx-background-color: aliceblue;">
             <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" layoutY="-1.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="750.0" />
                 <Button fx:id="welcomeViewClientButton" layoutX="44.0" layoutY="122.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #E0B0FF;" text="VIEW DATA" textFill="#00000099">
                     <font>
                         <Font name="System Bold" size="15.0" />
