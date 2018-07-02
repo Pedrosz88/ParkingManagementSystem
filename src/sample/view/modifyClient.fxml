@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -14,65 +16,66 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ModifyClientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="793.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ModifyClientController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="336.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
-                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="207.0" layoutY="31.0" prefHeight="31.0" prefWidth="252.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="793.0" />
+                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="269.0" layoutY="34.0" prefHeight="31.0" prefWidth="252.0">
                     <font>
                         <Font size="15.0" />
-                    </font></TextField>
-                <Button fx:id="viewSearchButton" layoutX="451.0" layoutY="31.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="VIEW" textAlignment="CENTER" textFill="#575656">
+                    </font>
+            </TextField>
+                <Button fx:id="viewSearchButton" layoutX="513.0" layoutY="34.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="VIEW" textAlignment="CENTER" textFill="#575656">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="viewExitButton" layoutX="414.0" layoutY="260.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
+                <Button fx:id="viewExitButton" layoutX="482.0" layoutY="249.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="viewBackButton" layoutX="125.0" layoutY="260.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
+                <Button fx:id="viewBackButton" layoutX="185.0" layoutY="249.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Label layoutX="85.0" layoutY="27.0" prefHeight="38.0" prefWidth="111.0" text=" Client name:" textFill="#a8a7a7">
+                <Label layoutX="199.0" layoutY="31.0" prefHeight="38.0" prefWidth="70.0" text=" Name :" textFill="#a8a7a7">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
                 </Label>
-            <Label layoutX="157.0" layoutY="149.0" prefHeight="38.0" prefWidth="77.0" text="Data type " textFill="#a8a7a7">
+            <Label layoutX="220.0" layoutY="152.0" prefHeight="38.0" prefWidth="84.0" text="Select data " textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="modifyClientCBox" layoutX="123.0" layoutY="185.0" prefHeight="31.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 12; -fx-font-weight: bold;" />
-            <Label layoutX="416.0" layoutY="149.0" prefHeight="38.0" prefWidth="70.0" text="New data" textFill="#a8a7a7">
+            <ChoiceBox fx:id="modifyClientCBox" layoutX="185.0" layoutY="188.0" prefHeight="31.0" prefWidth="140.0" style="-fx-alignment: center; -fx-font-size: 12; -fx-font-weight: bold;" />
+            <Label layoutX="457.0" layoutY="152.0" prefHeight="38.0" prefWidth="113.0" text="Enter new data" textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="modifyNewDataTextF" alignment="CENTER" layoutX="345.0" layoutY="185.0" prefHeight="31.0" prefWidth="184.0">
+            <TextField fx:id="modifyNewDataTextF" alignment="CENTER" layoutX="407.0" layoutY="188.0" prefHeight="31.0" prefWidth="184.0">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <Button fx:id="modifyClientDataButton" layoutX="526.0" layoutY="185.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: linear-gradient(gray, gray),        radial-gradient(center 50% -20%, radius 200%, gray 45%, grey 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" styleClass="addBobOk" text="MODIFY" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="modifyClientDataButton" layoutX="588.0" layoutY="188.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: linear-gradient(gray, gray),        radial-gradient(center 50% -20%, radius 200%, gray 45%, grey 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" styleClass="addBobOk" text="MODIFY" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="14.0" />
                </font>
             </Button>
-            <TableView fx:id="modifyTView" layoutX="9.0" layoutY="77.0" prefHeight="65.0" prefWidth="682.0">
+            <TableView fx:id="modifyTView" layoutX="10.0" layoutY="78.0" prefHeight="65.0" prefWidth="773.0">
                <columns>
-                  <TableColumn id="numeClient" fx:id="modifyNumeClientColumn" prefWidth="155.0" style="-fx-alignment: center;" text="Client" />
-                  <TableColumn fx:id="modifynrInmatColumn" prefWidth="79.0" style="-fx-alignment: center;" text="NrInmat" />
-                  <TableColumn fx:id="modifyMarcaColumn" prefWidth="96.0" style="-fx-alignment: center;" text="Marca" />
-                  <TableColumn id="modelul" fx:id="modifyModelColumn" style="-fx-alignment: center;" text="Modelul" />
-                  <TableColumn fx:id="modifyColorColumn" prefWidth="70.0" style="-fx-alignment: center;" text="Culoarea" />
-                  <TableColumn id="dataParcare" fx:id="modifyPDateColumn" prefWidth="87.0" style="-fx-alignment: center;" text="Data Parcare" />
-                  <TableColumn id="nrTelefon" fx:id="modifyPhoneColumn" prefWidth="114.0" style="-fx-alignment: center;" text="Nr.Telefon" />
+                  <TableColumn id="numeClient" fx:id="modifyNumeClientColumn" prefWidth="174.0" style="-fx-alignment: center;" text="Client" />
+                  <TableColumn fx:id="modifynrInmatColumn" prefWidth="88.0" style="-fx-alignment: center;" text="NrInmat" />
+                  <TableColumn fx:id="modifyMarcaColumn" prefWidth="91.0" style="-fx-alignment: center;" text="Marca" />
+                  <TableColumn id="modelul" fx:id="modifyModelColumn" prefWidth="85.0" style="-fx-alignment: center;" text="Modelul" />
+                  <TableColumn fx:id="modifyColorColumn" prefWidth="88.0" style="-fx-alignment: center;" text="Culoarea" />
+                  <TableColumn id="dataParcare" fx:id="modifyPDateColumn" prefWidth="104.0" style="-fx-alignment: center;" text="Data Parcare" />
+                  <TableColumn id="nrTelefon" fx:id="modifyPhoneColumn" prefWidth="141.0" style="-fx-alignment: center;" text="Nr.Telefon" />
                </columns>
             </TableView>
             </children>
@@ -95,6 +98,17 @@
                 <Blend />
             </effect>
         </ImageView>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="401.0" text="© Szasz Peter" textAlignment="CENTER" textFill="#ffffff8e">
+         <font>
+            <Font name="Arial Bold" size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </Label>
     </children>
     <effect>
         <InnerShadow blurType="ONE_PASS_BOX" color="#fafafab1" />

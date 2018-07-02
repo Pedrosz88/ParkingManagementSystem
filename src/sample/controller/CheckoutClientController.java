@@ -68,37 +68,10 @@ public class CheckoutClientController {
         });
     }
 
-    private ObservableList<Masina> getMasini(String numeCautat) {
-        String numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon;
-        ObservableList<Masina> masini = FXCollections.observableArrayList();
-        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
-        String user = "root";
-        String password = "Pedrosz23";
-        try {
-            Connection myConn = DriverManager.getConnection(dbUrl, user, password);
-            Statement myStmt = myConn.createStatement();
-            ResultSet myRs = myStmt.executeQuery("SELECT * from masini WHERE numeClient = '" + numeCautat + "'");
-            while (myRs.next()) {
-                numeClient = myRs.getString(2);
-                nrInmat = myRs.getString(3);
-                marca = myRs.getString(4);
-                modelul = myRs.getString(5);
-                culoarea = myRs.getString(6);
-                dataParcare = myRs.getString(7);
-                nrTelefon = myRs.getString(8);
-                System.out.println("\n" + numeClient + " " + nrInmat + " " + marca + " " + modelul + " " + culoarea + " " + dataParcare + " " + nrTelefon);
-                masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return masini;
-    }
-
 
     public void backScreenButtonPushed(ActionEvent event) throws IOException {
         Parent welcomeParent = FXMLLoader.load(getClass().getResource("../view/welcome.fxml"));
-        Scene welcomeScene = new Scene(welcomeParent, 700, 450);
+        Scene welcomeScene = new Scene(welcomeParent, 793, 420);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(welcomeScene);
         window.show();
@@ -121,7 +94,7 @@ public class CheckoutClientController {
                 daysParkedTField.setText(String.valueOf(totalZile));
                 statusTField.setText("Removed from system.");
                 long totalPlata = Calculator.calculPlata(mySt2, totalZile);
-                toPayTField.setText(String.valueOf(totalPlata));
+                toPayTField.setText(String.valueOf(totalPlata + "ron"));
                 mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
             }
         } catch (SQLException e) {

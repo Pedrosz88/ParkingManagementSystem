@@ -12,20 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ResourceBundle;
 
 public class RegisterController {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
 
     @FXML
     private Button registerViewButton;
@@ -93,7 +85,7 @@ public class RegisterController {
 
     public void viewScreenButtonPushed(ActionEvent event) throws IOException {
         Parent viewParent = FXMLLoader.load(getClass().getResource("../view/viewAll.fxml"));
-        Scene viewScene = new Scene(viewParent, 700, 450);
+        Scene viewScene = new Scene(viewParent, 793, 420);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(viewScene);
         window.show();
@@ -101,7 +93,7 @@ public class RegisterController {
 
     public void backScreenButtonPushed(ActionEvent event) throws IOException {
         Parent welcomeParent = FXMLLoader.load(getClass().getResource("../view/welcome.fxml"));
-        Scene welcomeScene = new Scene(welcomeParent, 700, 450);
+        Scene welcomeScene = new Scene(welcomeParent, 793, 420);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(welcomeScene);
         window.show();
@@ -116,7 +108,6 @@ public class RegisterController {
             Statement myStmt = myConn.createStatement();
             String insertDb = "insert into masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
                     "values ('" + numeClient + "', '" + nrInmat + "', '" + marca + "', '" + modelul + "', '" + culoarea + "', '" + dataParcare + "', '" + nrTelefon + "')";
-            System.out.println(insertDb);
             myStmt.executeUpdate(insertDb);
         } catch (SQLException e) {
             e.printStackTrace();

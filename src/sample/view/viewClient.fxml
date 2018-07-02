@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -13,52 +15,53 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewClientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="793.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ViewClientController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
-                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="219.0" layoutY="32.0" prefHeight="31.0" prefWidth="248.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="793.0" />
+                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="259.0" layoutY="38.0" prefHeight="31.0" prefWidth="248.0">
                <font>
                   <Font size="15.0" />
-               </font></TextField>
-                <Button fx:id="viewSearchButton" layoutX="459.0" layoutY="32.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="SEARCH" textAlignment="CENTER" textFill="#575656">
+               </font>
+            </TextField>
+                <Button fx:id="viewSearchButton" layoutX="500.0" layoutY="38.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(#f0ff35, #a9ff00),        radial-gradient(center 50% -20%, radius 200%, #b8ee36 45%, #80c800 50%); -fx-background-radius: 6, 5; -fx-background-insets: 0,1;" text="SEARCH" textAlignment="CENTER" textFill="#575656">
                     <font>
                         <Font name="Arial Rounded MT Bold" size="14.0" />
-                    </font>
+                      </font>
                 </Button>
-                <Button fx:id="viewExitButton" layoutX="429.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
+                <Button fx:id="viewExitButton" layoutX="482.0" layoutY="233.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Label layoutX="286.0" layoutY="83.0" prefHeight="38.0" prefWidth="129.0" text="CLIENT DATA" textFill="#6b6969">
+                <Label layoutX="325.0" layoutY="88.0" prefHeight="38.0" prefWidth="129.0" text="CLIENT DATA" textFill="#6b6969">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button fx:id="viewBackButton" layoutX="126.0" layoutY="228.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
+                <Button fx:id="viewBackButton" layoutX="185.0" layoutY="233.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <TableView fx:id="viewTView" layoutX="9.0" layoutY="121.0" prefHeight="65.0" prefWidth="682.0">
+                <TableView fx:id="viewTView" layoutX="9.0" layoutY="126.0" prefHeight="65.0" prefWidth="775.0">
                     <columns>
-                        <TableColumn fx:id="viewNumeClientColumn" prefWidth="159.0" style="-fx-alignment: center;" text="Client" />
-                        <TableColumn fx:id="viewnrInmatColumn" prefWidth="78.0" style="-fx-alignment: center;" text="Registration" />
-                        <TableColumn fx:id="viewMarcaColumn" prefWidth="93.0" style="-fx-alignment: center;" text="Make" />
-                        <TableColumn fx:id="viewModelColumn" prefWidth="88.0" style="-fx-alignment: center;" text="Model" />
-                        <TableColumn fx:id="viewColorColumn" prefWidth="62.0" style="-fx-alignment: center;" text="Color" />
-                        <TableColumn fx:id="viewPDateColumn" prefWidth="97.0" style="-fx-alignment: center;" text="Parking Date" />
-                        <TableColumn fx:id="viewPhoneColumn" prefWidth="122.0" style="-fx-alignment: center;" text="Phone" />
+                        <TableColumn fx:id="viewNumeClientColumn" prefWidth="164.99999237060547" style="-fx-alignment: center;" text="Client" />
+                        <TableColumn fx:id="viewnrInmatColumn" prefWidth="91.0" style="-fx-alignment: center;" text="Registration" />
+                        <TableColumn fx:id="viewMarcaColumn" prefWidth="105.0" style="-fx-alignment: center;" text="Make" />
+                        <TableColumn fx:id="viewModelColumn" prefWidth="96.0" style="-fx-alignment: center;" text="Model" />
+                        <TableColumn fx:id="viewColorColumn" prefWidth="88.0" style="-fx-alignment: center;" text="Color" />
+                        <TableColumn fx:id="viewPDateColumn" prefWidth="110.0" style="-fx-alignment: center;" text="Parking Date" />
+                        <TableColumn fx:id="viewPhoneColumn" prefWidth="119.0" style="-fx-alignment: center;" text="Phone" />
                     </columns>
                 </TableView>
-            <Label layoutX="76.0" layoutY="29.0" prefHeight="38.0" prefWidth="135.0" text="Enter full name:" textFill="#a8a7a7">
+            <Label layoutX="185.0" layoutY="35.0" prefHeight="38.0" prefWidth="61.0" text="Name :" textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f3f5" height="38.0" layoutX="9.0" layoutY="83.0" opacity="0.65" stroke="TRANSPARENT" strokeType="INSIDE" width="682.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f3f5" height="38.0" layoutX="10.0" layoutY="88.0" opacity="0.65" stroke="TRANSPARENT" strokeType="INSIDE" width="775.0" />
             </children>
         </AnchorPane>
         <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">
@@ -79,6 +82,17 @@
                 <Blend />
             </effect>
         </ImageView>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="401.0" text="© Szasz Peter" textAlignment="CENTER" textFill="#ffffff8e">
+         <font>
+            <Font name="Arial Bold" size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </Label>
     </children>
     <effect>
         <InnerShadow blurType="ONE_PASS_BOX" color="#fafafab1" />

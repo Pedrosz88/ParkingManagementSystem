@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,71 +13,76 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CheckoutClientController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="793.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CheckoutClientController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
-                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="202.0" layoutY="45.0" prefHeight="31.0" prefWidth="224.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="793.0" />
+                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="280.0" layoutY="33.0" prefHeight="31.0" prefWidth="224.0">
                <font>
-                  <Font name="System Bold" size="15.0" />
-               </font></TextField>
-                <Button fx:id="checkoutButton" layoutX="416.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="WHITE">
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+                <Button fx:id="checkoutButton" layoutX="494.0" layoutY="33.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
-                <Button fx:id="viewExitButton" layoutX="416.0" layoutY="242.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
+                <Button fx:id="viewExitButton" layoutX="467.0" layoutY="245.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="140.0" style="-fx-background-color: grey;" text="CLOSE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="viewBackButton" layoutX="172.0" layoutY="245.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Button fx:id="viewBackButton" layoutX="144.0" layoutY="242.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="140.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
-                    <font>
-                        <Font name="System Bold" size="20.0" />
-                    </font>
-                </Button>
-            <Label layoutX="89.0" layoutY="42.0" prefHeight="38.0" prefWidth="113.0" text=" Client name" textFill="#a8a7a7">
+            <Label layoutX="209.0" layoutY="30.0" prefHeight="38.0" prefWidth="65.0" text="Name :" textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="parkingDateTField" alignment="CENTER" layoutX="203.0" layoutY="89.0" prefHeight="31.0" prefWidth="306.0">
+            <TextField fx:id="parkingDateTField" alignment="CENTER" layoutX="277.0" layoutY="92.0" prefHeight="31.0" prefWidth="297.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="daysParkedTField" alignment="CENTER" layoutX="277.0" layoutY="123.0" prefHeight="31.0" prefWidth="297.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="statusTField" alignment="CENTER" layoutX="277.0" layoutY="154.0" prefHeight="31.0" prefWidth="297.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="167.0" layoutY="89.0" prefHeight="38.0" prefWidth="105.0" text=" Parking date " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="120.0" prefHeight="38.0" prefWidth="113.0" text="  Days parked " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="182.0" prefHeight="38.0" prefWidth="71.0" text="TO PAY " textFill="#f46886">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="151.0" prefHeight="38.0" prefWidth="71.0" text="   Status " textFill="#a8a7a7">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="toPayTField" alignment="CENTER" layoutX="277.0" layoutY="185.0" prefHeight="31.0" prefWidth="297.0" style="-fx-background-color: #f26b8844;">
                <font>
                   <Font name="System Bold" size="15.0" />
-               </font></TextField>
-            <TextField fx:id="daysParkedTField" alignment="CENTER" layoutX="203.0" layoutY="120.0" prefHeight="31.0" prefWidth="306.0">
-               <font>
-                  <Font size="15.0" />
-               </font></TextField>
-            <TextField fx:id="statusTField" alignment="CENTER" layoutX="203.0" layoutY="151.0" prefHeight="31.0" prefWidth="306.0">
-               <font>
-                  <Font size="15.0" />
-               </font></TextField>
-            <Label layoutX="93.0" layoutY="86.0" prefHeight="38.0" prefWidth="105.0" text=" Parking date " textFill="#a8a7a7">
-               <font>
-                  <Font name="System Bold" size="16.0" />
                </font>
-            </Label>
-            <Label layoutX="93.0" layoutY="117.0" prefHeight="38.0" prefWidth="113.0" text="  Days parked " textFill="#a8a7a7">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Label>
-            <Label layoutX="132.0" layoutY="179.0" prefHeight="38.0" prefWidth="71.0" text="TO PAY " textFill="#f46886">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="132.0" layoutY="148.0" prefHeight="38.0" prefWidth="71.0" text="   Status " textFill="#a8a7a7">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Label>
-            <TextField fx:id="toPayTField" alignment="CENTER" layoutX="203.0" layoutY="182.0" prefHeight="31.0" prefWidth="306.0">
-               <font>
-                  <Font size="15.0" />
-               </font></TextField>
+            </TextField>
             </children>
         </AnchorPane>
         <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">
@@ -96,6 +103,17 @@
                 <Blend />
             </effect>
         </ImageView>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="401.0" text="© Szasz Peter" textAlignment="CENTER" textFill="#ffffff8e">
+         <font>
+            <Font name="Arial Bold" size="9.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </Label>
     </children>
     <effect>
         <InnerShadow blurType="ONE_PASS_BOX" color="#fafafab1" />

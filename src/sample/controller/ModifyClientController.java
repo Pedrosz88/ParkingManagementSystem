@@ -133,7 +133,7 @@ public class ModifyClientController {
 
     public void backScreenButtonPushed(ActionEvent event) throws IOException {
         Parent welcomeParent = FXMLLoader.load(getClass().getResource("../view/welcome.fxml"));
-        Scene welcomeScene = new Scene(welcomeParent, 700, 450);
+        Scene welcomeScene = new Scene(welcomeParent, 793, 420);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(welcomeScene);
         window.show();
