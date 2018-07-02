@@ -12,10 +12,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.PM.Calculator;
 import sample.model.Masina;
 
 import java.io.IOException;
 import java.sql.*;
+import java.text.ParseException;
 
 public class CheckoutClientController {
 
@@ -41,7 +43,18 @@ public class CheckoutClientController {
     private Button viewBackButton;
 
     @FXML
+    public Button checkoutButton;
+
+    @FXML
     void initialize() {
+
+        checkoutButton.setOnAction(event -> {
+            try {
+                checkoutButtonPushed(event);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
 
         viewBackButton.setOnAction(event -> {
             try {
@@ -91,4 +104,31 @@ public class CheckoutClientController {
         window.show();
     }
 
+    public void checkoutButtonPushed(ActionEvent event) throws IOException {
+        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String user = "root";
+        String password = "Pedrosz23";
+        String numeCautat = (findnumeClientTField.getText());
+        try {
+            Connection myConn = DriverManager.getConnection(dbUrl, user, password);
+            Statement mySt = myConn.createStatement();
+            Statement mySt2 = myConn.createStatement();
+            ResultSet myRes = mySt.executeQuery("SELECT * from masini WHERE numeClient = '" + numeCautat + "'");
+            while (myRes.next()) {
+                String dataParcare = myRes.getString(7);
+                parkingDateTField.setText(dataParcare);
+                long totalZile = Calculator.calculZile(dataParcare);
+                daysParkedTField.setText(String.valueOf(totalZile));
+                statusTField.setText("Removed from system.");
+                long totalPlata = Calculator.calculPlata(mySt2, totalZile);
+                toPayTField.setText(String.valueOf(totalPlata));
+                //mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
