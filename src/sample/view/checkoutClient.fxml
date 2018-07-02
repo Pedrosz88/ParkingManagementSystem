@@ -43,17 +43,17 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="parkingDateTField" alignment="CENTER" layoutX="277.0" layoutY="92.0" prefHeight="31.0" prefWidth="297.0">
+            <TextField fx:id="parkingDateTField" alignment="CENTER" layoutX="277.0" layoutY="92.0" prefHeight="31.0" prefWidth="224.0">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="daysParkedTField" alignment="CENTER" layoutX="277.0" layoutY="123.0" prefHeight="31.0" prefWidth="297.0">
+            <TextField fx:id="daysParkedTField" alignment="CENTER" layoutX="277.0" layoutY="123.0" prefHeight="31.0" prefWidth="224.0">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="statusTField" alignment="CENTER" layoutX="277.0" layoutY="154.0" prefHeight="31.0" prefWidth="297.0">
+            <TextField fx:id="statusTField" alignment="CENTER" layoutX="277.0" layoutY="154.0" prefHeight="31.0" prefWidth="224.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -78,7 +78,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="toPayTField" alignment="CENTER" layoutX="277.0" layoutY="185.0" prefHeight="31.0" prefWidth="297.0" style="-fx-background-color: #f26b8844;">
+            <TextField fx:id="toPayTField" alignment="CENTER" layoutX="277.0" layoutY="185.0" prefHeight="31.0" prefWidth="224.0" style="-fx-background-color: #f26b8844;">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
