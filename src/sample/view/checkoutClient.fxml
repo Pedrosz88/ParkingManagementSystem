@@ -58,7 +58,7 @@
                   <Font size="15.0" />
                </font>
             </TextField>
-            <Label layoutX="167.0" layoutY="89.0" prefHeight="38.0" prefWidth="105.0" text=" Parking date " textFill="#a8a7a7">
+            <Label layoutX="175.0" layoutY="89.0" prefHeight="38.0" prefWidth="102.0" text=" Arrival date " textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

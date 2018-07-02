@@ -63,6 +63,13 @@ public class RegisterController {
             String dataParcare = registerdataParcareTField.getText();
             String nrTelefon = registernrTelefonTField.getText();
             addMasina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon);
+            registernumeClientTField.setText(null);
+            registernrInmatTField.setText(null);
+            registermarcaTField.setText(null);
+            registermodelulTField.setText(null);
+            registerculoareaTField.setText(null);
+            registerdataParcareTField.setText(null);
+            registernrTelefonTField.setText(null);
         });
         registerViewButton.setOnAction(event -> {
             try {

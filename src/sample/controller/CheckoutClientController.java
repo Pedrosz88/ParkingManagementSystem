@@ -92,13 +92,12 @@ public class CheckoutClientController {
                 parkingDateTField.setText(dataParcare);
                 long totalZile = Calculator.calculZile(dataParcare);
                 daysParkedTField.setText(String.valueOf(totalZile));
-                statusTField.setText("Removed from system.");
+                statusTField.setText("Checked-out!");
                 long totalPlata = Calculator.calculPlata(mySt2, totalZile);
-                toPayTField.setText(String.valueOf(totalPlata + "ron"));
+                toPayTField.setText(String.valueOf(totalPlata + " Ron"));
                 mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
         }
