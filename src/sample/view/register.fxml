@@ -48,12 +48,12 @@
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="registermodelulTField" alignment="CENTER" layoutX="235.0" layoutY="162.0" prefHeight="31.0" prefWidth="154.0">
+            <TextField fx:id="registermodelulTField" alignment="CENTER" layoutX="499.0" layoutY="116.0" prefHeight="31.0" prefWidth="154.0">
                <font>
                   <Font size="15.0" />
                </font>
             </TextField>
-            <TextField fx:id="registerdataParcareTField" alignment="CENTER" layoutX="499.0" layoutY="116.0" prefHeight="31.0" prefWidth="154.0">
+            <TextField fx:id="registerdataParcareTField" alignment="CENTER" layoutX="235.0" layoutY="162.0" prefHeight="31.0" prefWidth="154.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -88,7 +88,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="126.0" layoutY="158.0" prefHeight="38.0" prefWidth="98.0" text=" Car Model " textFill="#a8a7a7">
+            <Label layoutX="426.0" layoutY="113.0" prefHeight="38.0" prefWidth="71.0" text=" Model " textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -98,7 +98,7 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="430.0" layoutY="113.0" prefHeight="38.0" prefWidth="63.0" text="P.Date" textFill="#a8a7a7">
+            <Label layoutX="104.0" layoutY="158.0" prefHeight="38.0" prefWidth="116.0" text=" Parking Date" textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

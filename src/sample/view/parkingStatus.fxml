@@ -27,7 +27,7 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <Label layoutX="307.0" layoutY="39.0" text="PARKING STATUS" textFill="#00000038">
+                <Label layoutX="300.0" layoutY="39.0" text="PARKING STATUS" textFill="#00000038">
                     <font>
                         <Font name="System Bold" size="23.0" />
                     </font>
