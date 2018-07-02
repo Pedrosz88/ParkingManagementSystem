@@ -100,7 +100,6 @@ public class ViewClientController {
                 culoarea = myRs.getString(6);
                 dataParcare = myRs.getString(7);
                 nrTelefon = myRs.getString(8);
-                System.out.println("\n" + numeClient + " " + nrInmat + " " + marca + " " + modelul + " " + culoarea + " " + dataParcare + " " + nrTelefon);
                 masini.add(new Masina(numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon));
             }
         } catch (SQLException e) {

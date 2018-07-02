@@ -22,7 +22,7 @@ public class Calculator {
         return format.parse(date);                                  //transforma Stringul in data
     }
 
-    private static long calculZile(Date dataParcarii, Date dataDeAstazi) {
+    public static long calculZile(Date dataParcarii, Date dataDeAstazi) {
         long diferenta = (dataParcarii.getTime() - (dataDeAstazi.getTime() + 86400000)) / 86400000; //data de azi + 1 zi, converit din milisecunde
         return Math.abs(diferenta);
     }

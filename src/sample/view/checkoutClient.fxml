@@ -16,8 +16,11 @@
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="700.0" />
-                <TextField fx:id="findnumeClientTField" layoutX="202.0" layoutY="45.0" prefHeight="31.0" prefWidth="224.0" />
-                <Button fx:id="viewSearchButton" layoutX="416.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="WHITE">
+                <TextField fx:id="findnumeClientTField" alignment="CENTER" layoutX="202.0" layoutY="45.0" prefHeight="31.0" prefWidth="224.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+                <Button fx:id="checkoutButton" layoutX="416.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="94.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -37,9 +40,18 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="parkingDateTField" layoutX="203.0" layoutY="89.0" prefHeight="31.0" prefWidth="306.0" />
-            <TextField fx:id="daysParkedTField" layoutX="203.0" layoutY="120.0" prefHeight="31.0" prefWidth="306.0" />
-            <TextField fx:id="statusTField" layoutX="203.0" layoutY="151.0" prefHeight="31.0" prefWidth="306.0" />
+            <TextField fx:id="parkingDateTField" alignment="CENTER" layoutX="203.0" layoutY="89.0" prefHeight="31.0" prefWidth="306.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></TextField>
+            <TextField fx:id="daysParkedTField" alignment="CENTER" layoutX="203.0" layoutY="120.0" prefHeight="31.0" prefWidth="306.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="statusTField" alignment="CENTER" layoutX="203.0" layoutY="151.0" prefHeight="31.0" prefWidth="306.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
             <Label layoutX="93.0" layoutY="86.0" prefHeight="38.0" prefWidth="105.0" text=" Parking date " textFill="#a8a7a7">
                <font>
                   <Font name="System Bold" size="16.0" />
@@ -60,7 +72,10 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="toPayTField" layoutX="203.0" layoutY="182.0" prefHeight="31.0" prefWidth="306.0" />
+            <TextField fx:id="toPayTField" alignment="CENTER" layoutX="203.0" layoutY="182.0" prefHeight="31.0" prefWidth="306.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
             </children>
         </AnchorPane>
         <Label layoutX="165.0" layoutY="6.0" opacity="0.79" prefHeight="51.0" prefWidth="486.0" text="Parking Management System" textFill="WHITE">

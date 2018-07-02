@@ -31,13 +31,34 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Button>
-                <TextField fx:id="registernumeClientTField" layoutX="145.0" layoutY="29.0" prefHeight="31.0" prefWidth="511.0" />
-                <TextField fx:id="registernrInmatTField" layoutX="145.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0" />
-                <TextField fx:id="registermarcaTField" layoutX="145.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0" />
-            <TextField fx:id="registermodelulTField" layoutX="145.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0" />
-            <TextField fx:id="registerdataParcareTField" layoutX="451.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0" />
-            <TextField fx:id="registerculoareaTField" layoutX="451.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0" />
-            <TextField fx:id="registernrTelefonTField" layoutX="451.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0" />
+                <TextField fx:id="registernumeClientTField" alignment="CENTER" layoutX="145.0" layoutY="29.0" prefHeight="31.0" prefWidth="511.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+                <TextField fx:id="registernrInmatTField" alignment="CENTER" layoutX="145.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+                <TextField fx:id="registermarcaTField" alignment="CENTER" layoutX="145.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="registermodelulTField" alignment="CENTER" layoutX="145.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="registerdataParcareTField" alignment="CENTER" layoutX="451.0" layoutY="115.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="registerculoareaTField" alignment="CENTER" layoutX="451.0" layoutY="72.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+            <TextField fx:id="registernrTelefonTField" alignment="CENTER" layoutX="451.0" layoutY="161.0" prefHeight="31.0" prefWidth="205.0">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
             <Button fx:id="viewBackButton" layoutX="378.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: grey;" text="BACK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="20.0" />
