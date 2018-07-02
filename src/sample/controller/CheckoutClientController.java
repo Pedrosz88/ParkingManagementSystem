@@ -122,7 +122,7 @@ public class CheckoutClientController {
                 statusTField.setText("Removed from system.");
                 long totalPlata = Calculator.calculPlata(mySt2, totalZile);
                 toPayTField.setText(String.valueOf(totalPlata));
-                //mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
+                mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
             }
         } catch (SQLException e) {
             e.printStackTrace();
