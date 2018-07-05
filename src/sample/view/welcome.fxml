@@ -43,7 +43,7 @@
                   <InnerShadow blurType="ONE_PASS_BOX" color="WHITE" />
                </effect>
                 </Button>
-            <Button fx:id="welcomeRegisterButton" layoutX="95.0" layoutY="77.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightgreen;" text="REGISTER " textFill="#00000099">
+            <Button fx:id="welcomeRegisterButton" layoutX="95.0" layoutY="77.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: lightgreen;" text="CHECK-IN" textFill="#00000099">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -51,7 +51,7 @@
                   <InnerShadow blurType="ONE_PASS_BOX" choke="0.35" color="#2f2d2d6e" height="25.45" radius="14.82" width="35.83" />
                </effect>
             </Button>
-            <Button fx:id="welcomeCheckoutClientButton" layoutX="95.0" layoutY="213.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #f46886;" text="CHECKOUT" textFill="#00000099">
+            <Button fx:id="welcomeCheckoutClientButton" layoutX="95.0" layoutY="213.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: #f46886;" text="CHECK-OUT" textFill="#00000099">
                <font>
                         <Font name="System Bold" size="15.0" />
                </font>

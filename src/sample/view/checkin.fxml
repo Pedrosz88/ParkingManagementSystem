@@ -13,12 +13,12 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="793.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegisterController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="793.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.CheckinController">
     <children>
         <AnchorPane layoutY="90.0" prefHeight="301.0" prefWidth="700.0" style="-fx-background-color: aliceblue;">
             <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f800" height="311.0" opacity="0.23" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" width="793.0" />
-                <Button fx:id="registerRegisterButton" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: lightgreen;" text="REGISTER" textFill="#575757">
+                <Button fx:id="registerRegisterButton" layoutX="220.0" layoutY="228.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="135.0" style="-fx-background-color: lightgreen;" text="CHECK-IN" textFill="#575757">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>

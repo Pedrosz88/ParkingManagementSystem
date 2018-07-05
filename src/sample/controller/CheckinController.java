@@ -17,7 +17,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class RegisterController {
+public class CheckinController {
 
     @FXML
     private Button registerViewButton;

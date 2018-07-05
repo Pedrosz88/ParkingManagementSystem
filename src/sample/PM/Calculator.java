@@ -19,7 +19,7 @@ public class Calculator {
     }
 
     private static Date getDate(String date) throws ParseException {
-        return format.parse(date);                                  //transforma Stringul in data
+        return format.parse(date);                                  //transforma Stringul in format data (zz.ll.aaaa)
     }
 
     public static long calculZile(Date dataParcarii, Date dataDeAstazi) {
