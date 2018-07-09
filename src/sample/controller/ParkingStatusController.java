@@ -1,8 +1,6 @@
 package sample.controller;
 
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,16 +8,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.model.Masina;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.*;
-import java.util.ResourceBundle;
 
 public class ParkingStatusController {
 
@@ -29,9 +22,19 @@ public class ParkingStatusController {
     @FXML
     private Button viewBackButton;
 
+    @FXML
+    private TextField currentClientsTField;
+
+    @FXML
+    private TextField checkedInClientsTField;
+
+    @FXML
+    private TextField checkedOutClientsTField;
+
 
     @FXML
     void initialize() {
+        currentClients();
 
         viewBackButton.setOnAction(event -> {
             try {
@@ -53,4 +56,22 @@ public class ParkingStatusController {
         window.show();
     }
 
+    public void currentClients() {
+        String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
+        String user = "root";
+        String password = "Pedrosz23";
+        int index = 0;
+        try {
+            Connection myConn = DriverManager.getConnection(dbUrl, user, password);
+            Statement myStmt = myConn.createStatement();
+            ResultSet myRes = myStmt.executeQuery("SELECT * from masini");
+            while (myRes.next()) {
+                index++;
+            }
+            currentClientsTField.setText(String.valueOf(index));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
