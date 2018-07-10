@@ -45,15 +45,13 @@ public class CheckoutClientController {
     @FXML
     public Button checkoutButton;
 
+    static int removedCars;
+
     @FXML
     void initialize() {
 
         checkoutButton.setOnAction(event -> {
-            try {
-                checkoutButtonPushed(event);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            checkoutButtonPushed(event);
         });
 
         viewBackButton.setOnAction(event -> {
@@ -77,7 +75,7 @@ public class CheckoutClientController {
         window.show();
     }
 
-    public void checkoutButtonPushed(ActionEvent event) throws IOException {
+    public void checkoutButtonPushed(ActionEvent event) {
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
@@ -92,15 +90,20 @@ public class CheckoutClientController {
                 parkingDateTField.setText(dataParcare);
                 long totalZile = Calculator.calculZile(dataParcare);
                 daysParkedTField.setText(String.valueOf(totalZile));
-                statusTField.setText("Checked-out!");
+                statusTField.setText("Removed from system!");
                 long totalPlata = Calculator.calculPlata(mySt2, totalZile);
                 toPayTField.setText(String.valueOf(totalPlata + " Ron"));
                 mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
+                removedCars++;
             }
         } catch (SQLException e) {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    public interface CheckoutControllerInterface {
+        void checkoutButtonPushed();
     }
 }
 

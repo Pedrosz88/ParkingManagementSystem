@@ -14,7 +14,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.*;
 
-public class ParkingStatusController {
+import static sample.controller.CheckinController.addedCars;
+import static sample.controller.CheckoutClientController.removedCars;
+
+public class ParkingStatusController implements CheckoutClientController.CheckoutControllerInterface, CheckinController.CheckinControllerInterface {
 
     @FXML
     private Button viewExitButton;
@@ -31,10 +34,9 @@ public class ParkingStatusController {
     @FXML
     private TextField checkedOutClientsTField;
 
-
     @FXML
     void initialize() {
-        currentClients();
+        statusChecker();
 
         viewBackButton.setOnAction(event -> {
             try {
@@ -56,22 +58,35 @@ public class ParkingStatusController {
         window.show();
     }
 
-    public void currentClients() {
+    public void statusChecker() {
         String dbUrl = "jdbc:mysql://localhost/proiect?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
         String user = "root";
         String password = "Pedrosz23";
-        int index = 0;
+        int countCars = 0;
         try {
             Connection myConn = DriverManager.getConnection(dbUrl, user, password);
             Statement myStmt = myConn.createStatement();
             ResultSet myRes = myStmt.executeQuery("SELECT * from masini");
             while (myRes.next()) {
-                index++;
+                countCars++;
             }
-            currentClientsTField.setText(String.valueOf(index));
+            currentClientsTField.setText(String.valueOf(countCars));
+            checkedInClientsTField.setText(String.valueOf(addedCars));
+            checkedOutClientsTField.setText((String.valueOf(removedCars)));
         } catch (
                 SQLException e) {
             e.printStackTrace();
         }
+    }
+
+
+    @Override
+    public void checkoutButtonPushed() {
+
+    }
+
+    @Override
+    public void addMasina() {
+
     }
 }

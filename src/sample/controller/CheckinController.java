@@ -51,6 +51,8 @@ public class CheckinController {
 
     @FXML
     private TextField registernrTelefonTField;
+    static int addedCars;
+
 
     @FXML
     void initialize() {
@@ -116,8 +118,14 @@ public class CheckinController {
             String insertDb = "insert into masini (numeClient, nrInmat, marca, modelul, culoarea, dataParcare, nrTelefon) " +
                     "values ('" + numeClient + "', '" + nrInmat + "', '" + marca + "', '" + modelul + "', '" + culoarea + "', '" + dataParcare + "', '" + nrTelefon + "')";
             myStmt.executeUpdate(insertDb);
+            addedCars++;
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    public interface CheckinControllerInterface {
+        void addMasina();
+    }
+
 }
