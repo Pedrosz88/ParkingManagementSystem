@@ -17,7 +17,7 @@ import java.sql.*;
 import static sample.controller.CheckinController.addedCars;
 import static sample.controller.CheckoutClientController.removedCars;
 
-public class ParkingStatusController implements CheckoutClientController.CheckoutControllerInterface, CheckinController.CheckinControllerInterface {
+public class ParkingStatusController {
 
     @FXML
     private Button viewExitButton;
@@ -77,16 +77,5 @@ public class ParkingStatusController implements CheckoutClientController.Checkou
                 SQLException e) {
             e.printStackTrace();
         }
-    }
-
-
-    @Override
-    public void checkoutButtonPushed() {
-
-    }
-
-    @Override
-    public void addMasina() {
-
     }
 }

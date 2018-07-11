@@ -1,8 +1,6 @@
 package sample.controller;
 
 import javafx.application.Platform;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +11,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import sample.PM.Calculator;
-import sample.model.Masina;
 
 import java.io.IOException;
 import java.sql.*;
@@ -90,7 +87,7 @@ public class CheckoutClientController {
                 parkingDateTField.setText(dataParcare);
                 long totalZile = Calculator.calculZile(dataParcare);
                 daysParkedTField.setText(String.valueOf(totalZile));
-                statusTField.setText("Removed from system!");
+                statusTField.setText("Successfully removed!");
                 long totalPlata = Calculator.calculPlata(mySt2, totalZile);
                 toPayTField.setText(String.valueOf(totalPlata + " Ron"));
                 mySt.executeUpdate("DELETE FROM masini where numeClient = '" + numeCautat + "'");
@@ -100,10 +97,6 @@ public class CheckoutClientController {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-    }
-
-    public interface CheckoutControllerInterface {
-        void checkoutButtonPushed();
     }
 }
 

@@ -51,8 +51,8 @@ public class CheckinController {
 
     @FXML
     private TextField registernrTelefonTField;
-    static int addedCars;
 
+    static int addedCars;
 
     @FXML
     void initialize() {
@@ -123,9 +123,4 @@ public class CheckinController {
             e.printStackTrace();
         }
     }
-
-    public interface CheckinControllerInterface {
-        void addMasina();
-    }
-
 }
