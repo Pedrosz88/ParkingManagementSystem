@@ -48,19 +48,19 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </TextField>
-            <Label layoutX="262.0" layoutY="81.0" prefHeight="38.0" prefWidth="172.0" text="Currently parked cars :" textFill="#a8a7a7">
+            <Label layoutX="240.0" layoutY="82.0" prefHeight="38.0" prefWidth="191.0" text="Parked cars (currently) :" textFill="#a8a7a7">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="244.0" layoutY="125.0" prefHeight="38.0" prefWidth="190.0" text="Checked-In cars (today) :" textFill="#a8a7a7">
+            <Label layoutX="233.0" layoutY="125.0" prefHeight="38.0" prefWidth="205.0" text="Checked-In cars (today) :" textFill="#a8a7a7">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <Label layoutX="231.0" layoutY="171.0" prefHeight="38.0" prefWidth="203.0" text="Checked-Out cars (today) :" textFill="#a8a7a7">
+            <Label layoutX="219.0" layoutY="171.0" prefHeight="38.0" prefWidth="216.0" text="Checked-Out cars (today) :" textFill="#a8a7a7">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="17.0" />
                </font>
             </Label>
             </children>
